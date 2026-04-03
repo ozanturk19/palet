@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#dbdad7",
+                    "inverse-on-surface": "#f2f1ee",
+                    "primary-fixed": "#ffdbca",
+                    "background": "#faf9f6",
+                    "primary-fixed-dim": "#ffb690",
+                    "error-container": "#ffdad6",
+                    "outline": "#85736b",
+                    "secondary-container": "#fed3c7",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#e7bdb1",
+                    "on-background": "#1a1c1a",
+                    "on-tertiary-fixed": "#281801",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#53443c",
+                    "on-surface": "#1a1c1a",
+                    "inverse-primary": "#ffb690",
+                    "secondary-fixed": "#ffdbd0",
+                    "outline-variant": "#d8c2b8",
+                    "inverse-surface": "#2f312f",
+                    "tertiary": "#725a39",
+                    "surface-tint": "#f05a28",
+                    "surface-container-low": "#f4f3f1",
+                    "on-tertiary-container": "#513d1e",
+                    "surface-container-highest": "#e3e2e0",
+                    "on-primary-fixed": "#331100",
+                    "surface-bright": "#faf9f6",
+                    "on-primary-container": "#ffffff",
+                    "on-secondary-fixed-variant": "#5d4037",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "surface-container": "#efeeeb",
+                    "on-secondary-fixed": "#2c160e",
+                    "surface": "#faf9f6",
+                    "tertiary-fixed": "#feddb3",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#e1c299",
+                    "primary": "#f05a28",
+                    "on-secondary-container": "#795950",
+                    "secondary": "#77574d",
+                    "primary-container": "#f05a28",
+                    "tertiary-container": "#c5a881",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e9e8e5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#6e3818",
+                    "surface-variant": "#e3e2e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/20 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/70 dark:bg-[#1a1c1a]/70 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-3xl font-bold tracking-tighter text-[#f05a28] dark:text-[#f05a28] font-headline uppercase" href="#">PALET</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] dark:hover:text-[#f05a28] transition-colors duration-300" href="#">Suede Boots</a>
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] dark:hover:text-[#f05a28] transition-colors duration-300" href="#">Loafers</a>
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] dark:hover:text-[#f05a28] transition-colors duration-300" href="#">Derbies</a>
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] dark:hover:text-[#f05a28] transition-colors duration-300" href="#">Care Kit</a>
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] dark:hover:text-[#f05a28] transition-colors duration-300" href="#">The Monograph</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] transition-all"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+<button class="text-[#f05a28] dark:text-[#f05a28] relative"><span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span><span class="absolute -top-1 -right-1 text-[10px] font-bold bg-[#f05a28] text-white w-4 h-4 rounded-full flex items-center justify-center">2</span></button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-[1920px] mx-auto min-h-screen">
+<header class="mb-16">
+<span class="font-label text-xs uppercase tracking-widest text-primary font-semibold mb-4 block">Shopping Bag</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-on-background">Review your curation.</h1>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 xl:gap-24">
+<!-- Left Column: Cart Items -->
+<div class="lg:col-span-7 space-y-12">
+<div class="space-y-8">
+<!-- Item 1 -->
+<div class="flex flex-col md:flex-row gap-8 pb-12 items-start border-b border-outline-variant/10">
+<div class="w-full md:w-56 aspect-[4/5] bg-surface-container overflow-hidden rounded-sm flex-shrink-0">
+<img alt="Suede Loafers in Sand" class="w-full h-full object-cover" data-alt="Close-up of premium sand-colored suede loafers on a clean, warm-toned stone pedestal with soft natural side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuuna7oEpmgbGwZvLzMwCNwjwMBT3j2ydEfft1horwF84Uup-mvMHr4N5GvTu25g5jVxYN5tDhubxyxigsGrDydJZoGj-aPuik6pQyPPHLPTDcfTgS3mOr2OCHgA-wxWQy19rF8YkAUqUhdt2QbzvkFl8RhDd1Lu2Jy7jHS2GSZV7XVvnM_n5DyXdPWkbIOjmOepG5jPLWfSfUuL8o-z053YTTmhxVnnp6GXiGUgWJ0--eJJ0cX-_chYr5QfA2Az5zFrQFLgjVcQEz"/>
+</div>
+<div class="flex-grow flex flex-col h-full justify-between py-2">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Suede Loafers in Sand</h3>
+<p class="font-headline text-xl font-medium">$420.00</p>
+</div>
+<p class="text-on-surface-variant font-body text-sm mb-6">Italian Calf Suede • Leather Sole • Size 42</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-6 bg-surface-container-low px-4 py-2 rounded">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg" data-icon="remove">remove</span></button>
+<span class="font-headline font-bold text-lg">01</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg" data-icon="add">add</span></button>
+</div>
+<button class="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-error transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col md:flex-row gap-8 pb-12 items-start">
+<div class="w-full md:w-56 aspect-[4/5] bg-surface-container overflow-hidden rounded-sm flex-shrink-0">
+<img alt="The Monograph: Vol. 01" class="w-full h-full object-cover" data-alt="Editorial book with a linen cover and gold-stamped lettering lying on a mahogany table next to a soft shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKHSi5lJpVRlFNNnToLs8fMe1C9FqcKiVes6fsEckc9vOM04tUbXml_d39sOvSqmhR9svZ_XnPQtEqwWt1W7HWtEmy988460VWSdfi0oHxkkhb1bKtsdYCwGX-lQl_juFQ5tbOvImHJNJZJr5pIpxxl2f6ndJJQTiZ4xoUlBWBoFWsuYh_n6-rX_Vq0mXPMddCttAEBGZOYgJmqH3uMbjPQX0xA7HO6Bvp_Ob4TtOcAXHNttLtWo7YG3_WFE946xCtIsNFRrkVuqtY"/>
+</div>
+<div class="flex-grow flex flex-col h-full justify-between py-2">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold tracking-tight">The Monograph: Vol. 01</h3>
+<p class="font-headline text-xl font-medium">$85.00</p>
+</div>
+<p class="text-on-surface-variant font-body text-sm mb-6">Limited Edition • 240 Pages • Hardcover</p>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-6 bg-surface-container-low px-4 py-2 rounded">
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg" data-icon="remove">remove</span></button>
+<span class="font-headline font-bold text-lg">01</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg" data-icon="add">add</span></button>
+</div>
+<button class="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-error transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="delete">delete</span> Remove
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Shipping Form (Task-Focused Sub-section) -->
+<div class="bg-surface-container-low p-10 space-y-8">
+<h2 class="font-headline text-2xl font-bold tracking-tight">Shipping Destination</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant block mb-2">Street Address</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 transition-all font-body text-lg py-2 placeholder:text-on-surface-variant/30" placeholder="124 Gallery Row" type="text"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant block mb-2">City</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 transition-all font-body text-lg py-2 placeholder:text-on-surface-variant/30" placeholder="London" type="text"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant block mb-2">Postcode</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant/30 focus:border-primary focus:ring-0 transition-all font-body text-lg py-2 placeholder:text-on-surface-variant/30" placeholder="EC1A 1BB" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 space-y-8">
+<div class="bg-surface-container p-10">
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-8">Order Summary</h2>
+<div class="space-y-4 border-b border-outline-variant/20 pb-8 mb-8">
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body">Subtotal</span>
+<span class="font-headline font-bold">$505.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body">Shipping (Standard)</span>
+<span class="font-headline font-bold">$25.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-body">Estimated Duties</span>
+<span class="font-headline font-bold">—</span>
+</div>
+</div>
+<div class="flex justify-between items-baseline mb-10">
+<span class="font-headline text-xl font-bold">Total</span>
+<div class="text-right">
+<span class="font-headline text-4xl font-extrabold tracking-tighter text-primary">$530.00</span>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mt-1">Inclusive of VAT</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-6 font-label uppercase tracking-widest font-bold text-sm hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-4">
+                            Complete Purchase
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="mt-8 flex items-center gap-4 text-on-surface-variant/60 justify-center">
+<span class="material-symbols-outlined text-lg" data-icon="lock">lock</span>
+<span class="font-label text-[10px] uppercase tracking-widest">Encrypted &amp; Secure Checkout</span>
+</div>
+</div>
+<!-- Editorial Callout -->
+<div class="bg-primary/5 p-8 flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="eco">eco</span>
+<div>
+<h4 class="font-headline font-bold text-primary">Carbon Neutral Shipping</h4>
+<p class="text-sm text-on-surface-variant mt-2 font-body leading-relaxed">Every Palet delivery is offset through reforestation projects in Northern Europe, ensuring your curation arrives with purpose.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-[#dbdad7] dark:bg-[#1a1c1a]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-[1920px] mx-auto">
+<div class="space-y-6">
+<span class="text-xl font-bold text-[#f05a28] dark:text-[#f05a28] font-headline uppercase">PALET</span>
+<p class="text-[#5d4037] dark:text-[#dbdad7] font-body text-sm leading-relaxed">Defining the digital tactile experience through suede, craftsmanship, and intentional minimalism.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] text-sm uppercase tracking-widest font-bold text-[#5d4037] dark:text-[#efeeeb]">Navigation</span>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] transition-all" href="#">Suede Boots</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] transition-all" href="#">Loafers</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] transition-all" href="#">Derbies</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] text-sm uppercase tracking-widest font-bold text-[#5d4037] dark:text-[#efeeeb]">Company</span>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] transition-all" href="#">Sustainability</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7] hover:text-[#f05a28] transition-all" href="#">Store Locator</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Manrope'] text-sm uppercase tracking-widest font-bold text-[#5d4037] dark:text-[#efeeeb]">Newsletter</span>
+<div class="flex gap-2">
+<input class="bg-transparent border-b border-[#f05a28]/20 py-2 w-full focus:ring-0 focus:border-[#f05a28] transition-all text-sm font-body" placeholder="Email" type="email"/>
+<button class="text-[#f05a28]"><span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></button>
+</div>
+<p class="text-[10px] text-[#5d4037] dark:text-[#dbdad7]/50 mt-2">© 2024 PALET. The Suede Gallery. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
