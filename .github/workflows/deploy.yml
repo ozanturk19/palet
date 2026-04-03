@@ -61,16 +61,28 @@ jobs:
       - name: Restart container on VPS
         run: |
           ssh root@135.181.206.109 '
+            # Firewall: port 8007 aç
+            if command -v ufw &> /dev/null; then
+              ufw allow 8007/tcp 2>/dev/null || true
+              ufw --force enable 2>/dev/null || true
+              echo "UFW: port 8007 açıldı"
+            fi
+            # iptables fallback
+            iptables -C INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || \
+              iptables -I INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || true
+
+            # Container yeniden başlat
             docker stop palet-web 2>/dev/null || true
             docker rm palet-web 2>/dev/null || true
             docker run -d \
               --name palet-web \
               --restart unless-stopped \
-              -p 8007:8007 \
+              -p 0.0.0.0:8007:8007 \
               palet-web:latest
-            sleep 3
+            sleep 5
             docker ps | grep palet-web
-            echo "✅ Canlıda → http://135.181.206.109:8007"
+            curl -sf http://localhost:8007 > /dev/null && echo "✅ Localhost OK" || echo "⚠️ Localhost yanıt vermedi"
+            echo "✅ Deploy tamamlandı → http://135.181.206.109:8007"
           '
 
       - name: Health check
