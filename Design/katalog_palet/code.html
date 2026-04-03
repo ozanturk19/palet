@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PALET | The Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#dbdad7",
+                    "inverse-on-surface": "#f2f1ee",
+                    "primary-fixed": "#ffdbca",
+                    "background": "#faf9f6",
+                    "primary-fixed-dim": "#ffb690",
+                    "error-container": "#ffdad6",
+                    "outline": "#85736b",
+                    "secondary-container": "#fed3c7",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#e7bdb1",
+                    "on-background": "#1a1c1a",
+                    "on-tertiary-fixed": "#281801",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#53443c",
+                    "on-surface": "#1a1c1a",
+                    "inverse-primary": "#ffb690",
+                    "secondary-fixed": "#ffdbd0",
+                    "outline-variant": "#d8c2b8",
+                    "inverse-surface": "#2f312f",
+                    "tertiary": "#725a39",
+                    "surface-tint": "#8b4f2d",
+                    "surface-container-low": "#f4f3f1",
+                    "on-tertiary-container": "#513d1e",
+                    "surface-container-highest": "#e3e2e0",
+                    "on-primary-fixed": "#331100",
+                    "surface-bright": "#faf9f6",
+                    "on-primary-container": "#663212",
+                    "on-secondary-fixed-variant": "#5d4037",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#584324",
+                    "surface-container": "#efeeeb",
+                    "on-secondary-fixed": "#2c160e",
+                    "surface": "#faf9f6",
+                    "tertiary-fixed": "#feddb3",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#e1c299",
+                    "primary": "#8b4f2d",
+                    "on-secondary-container": "#795950",
+                    "secondary": "#77574d",
+                    "primary-container": "#e69b73",
+                    "tertiary-container": "#c5a881",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e9e8e5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#6e3818",
+                    "surface-variant": "#e3e2e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/70 dark:bg-[#1a1c1a]/70 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+<div class="text-3xl font-bold tracking-tighter text-[#8b4f2d] dark:text-[#e69b73] font-headline">PALET</div>
+<div class="hidden md:flex items-center gap-8 font-body">
+<a class="text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">Suede Boots</a>
+<a class="text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">Loafers</a>
+<a class="text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">Derbies</a>
+<a class="text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">Care Kit</a>
+<a class="text-[#8b4f2d] dark:text-[#e69b73] border-b-2 border-[#8b4f2d] dark:border-[#e69b73] pb-1" href="#">The Monograph</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-all">person</button>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-all">shopping_bag</button>
+<button class="md:hidden material-symbols-outlined">menu</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 min-h-screen">
+<header class="px-12 mb-16 max-w-[1920px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div class="max-w-2xl">
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-4 block">Archive 2024</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-on-background leading-none">The Collection</h1>
+</div>
+<div class="text-right">
+<p class="font-body text-on-surface-variant max-w-xs italic">A tactile exploration of premium suede, curated for the modern gallery of life.</p>
+</div>
+</div>
+</header>
+<div class="px-12 max-w-[1920px] mx-auto flex flex-col md:flex-row gap-16">
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-40 space-y-12">
+<div>
+<h3 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6 font-bold">Categories</h3>
+<ul class="space-y-3 font-body text-sm">
+<li class="flex justify-between items-center text-primary font-bold"><span>All Items</span><span class="text-[10px]">18</span></li>
+<li class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span>Chelsea Boots</span><span class="text-[10px]">6</span></li>
+<li class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span>Penny Loafers</span><span class="text-[10px]">4</span></li>
+<li class="flex justify-between items-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer"><span>Oxford Derbies</span><span class="text-[10px]">8</span></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6 font-bold">Shade Palette</h3>
+<div class="grid grid-cols-5 gap-3">
+<button class="w-8 h-8 rounded-full bg-[#3d2b1f] ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-[#8b4f2d] ring-2 ring-offset-2 ring-primary transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-[#c5a881] ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-[#e69b73] ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-[#dbdad7] ring-2 ring-offset-2 ring-transparent hover:ring-outline-variant transition-all"></button>
+</div>
+</div>
+<div>
+<h3 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6 font-bold">Size</h3>
+<div class="flex flex-wrap gap-2">
+<button class="w-10 h-10 flex items-center justify-center text-xs font-medium border border-transparent bg-surface-container-high hover:bg-surface-container-highest transition-colors">40</button>
+<button class="w-10 h-10 flex items-center justify-center text-xs font-medium border border-primary text-primary">41</button>
+<button class="w-10 h-10 flex items-center justify-center text-xs font-medium border border-transparent bg-surface-container-high hover:bg-surface-container-highest transition-colors">42</button>
+<button class="w-10 h-10 flex items-center justify-center text-xs font-medium border border-transparent bg-surface-container-high hover:bg-surface-container-highest transition-colors">43</button>
+<button class="w-10 h-10 flex items-center justify-center text-xs font-medium border border-transparent bg-surface-container-high hover:bg-surface-container-highest transition-colors">44</button>
+</div>
+</div>
+</div>
+</aside>
+<section class="flex-grow">
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24">
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="close up of premium tobacco brown suede chelsea boots standing on a minimal concrete pedestal with soft morning lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTUZkQY_QN0bCqBuLHneF5L64BHN86pK7mnEo15XVyHQoRioNBIMQ7MYcGt5Jmj7vlz7KRGJ7GQWLduYCu4ppqn6udgxAfckLzxGTTISQ0u2cMLLZ7ax9HuOEK8p4KLloc93vW6cR_texyyhkbYzmVmiA8jVl5HrnkF19_myU6oCJibcxqE3OIrtNPGeLXf7lWBmR-K-nT5nsOAwCB-U6uyBDAQ5SCv5jfzUvfKUFO40aKbZJzCKkeADH3cSG0kw7AvGuWsKRTKf_h"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label text-[10px] uppercase tracking-widest px-3 py-1">Limited</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-xl font-headline font-semibold text-on-background group-hover:text-primary transition-colors">Elysian Chelsea</h2>
+<p class="text-on-surface-variant text-sm mt-1">Deep Tobacco Suede</p>
+</div>
+<span class="text-lg font-headline font-light text-on-surface">$420</span>
+</div>
+<div class="mt-4 flex gap-2">
+<div class="w-3 h-3 rounded-full bg-[#3d2b1f]"></div>
+<div class="w-3 h-3 rounded-full bg-[#8b4f2d]"></div>
+</div>
+</div>
+<div class="group cursor-pointer pt-12 md:pt-24">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="artisanal sand colored suede penny loafers resting on a warm wooden floor with dramatic architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCweEqWRczKkmndYLKyj5rNG9NMQBnbDAOP0menQ1T3W3jWBQZeUBl77LfbiqfBixIQHxxiN5EnAja9MQAeIbRKfnfHjOGob8osBj288edC_tmcAnKvICRTxJmYHoZwHYs0gANBedEv-OZZDHFCCpA1xqqIBE9TUqZeQA1VCofk5TMl2Ad8-lj4liYIo5mCAiIgCBMAP4GsiZ1VKDnifBr_YnKgP7Usu1LJ7l3ohS26UfhkhDN575GxYppTyxiHF9xSyOBhBIZUOKD8"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-xl font-headline font-semibold text-on-background group-hover:text-primary transition-colors">Arc Loafer</h2>
+<p class="text-on-surface-variant text-sm mt-1">Sand Drift Suede</p>
+</div>
+<span class="text-lg font-headline font-light text-on-surface">$385</span>
+</div>
+<div class="mt-4 flex gap-2">
+<div class="w-3 h-3 rounded-full bg-[#dbdad7]"></div>
+<div class="w-3 h-3 rounded-full bg-[#c5a881]"></div>
+<div class="w-3 h-3 rounded-full bg-[#e69b73]"></div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="modern minimalist burnt orange suede oxford shoes arranged symmetrically against a soft peach colored backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyN-tODtwQFfptMNBDDDOuzc9NkitPW09ibZpYOS-j8oLFvcRIpFP5RK42LppjbI3_v8Pj6ahOzrZ37OE7H6eyPZkTT4WIebfeXQPeoWaR4Sn1ioveekwkPNTzTBIjkncYxsPH3y85QE2SMGjaDqbnlO8zBCb-qwhTLhn5fL5WTE21zVM_3ZPTC1hoo_VF8_b1TlxV0GNeetkTFR4_gdwA_CZ15e7gEvKh1ZOf8_PNd7XsrhpEO76cok_FhK8cyOUtsUI5KiRCYrEU"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-xl font-headline font-semibold text-on-background group-hover:text-primary transition-colors">Mesa Derby</h2>
+<p class="text-on-surface-variant text-sm mt-1">Burnt Ochre Suede</p>
+</div>
+<span class="text-lg font-headline font-light text-on-surface">$410</span>
+</div>
+<div class="mt-4 flex gap-2">
+<div class="w-3 h-3 rounded-full bg-[#e69b73]"></div>
+</div>
+</div>
+<div class="group cursor-pointer md:col-span-2">
+<div class="relative aspect-[16/9] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="wide shot of multiple suede shoes in shades of brown and tan lined up on a library shelf with soft ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqyHxdg3ve8Nh4q030N7JUYB8SYVpx97A1WjyEFp4tXaHF8EUkbkyvJnKSUI-u4Po5-EB-e31TERYXVTKfp6dLXRAW9pIqu42hoBgqYwQIctlivpBrKZXNv_586sQrnIyf1hyBRfJNPwxEDbwLCjTkhUZ5XY81lqKTLWW6527khVWrWqvkxEVUkjSW2DbjDm5rRek-8w_byThrB6yWPy1IckOY6rsfqilpiK7j6jrtlm0Op1wXBc3a010xdMVi7SIibAPM3XF3jxX5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-12">
+<p class="text-white font-headline text-3xl tracking-tight max-w-lg">The Suede Monograph: An exploration of texture, from napped roughout to velvet calfskin.</p>
+</div>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="premium dark chocolate suede boots with intricate stitching detail shot in extreme close up with soft depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjEDaGbqtf6mgxSvUP14KRTpOLxn9pnoZ_zevO3SE0R693J-ZcYtHbm718iO-JZr2bLLLLOK964yOZ9qFE3aiHJBjIoLiDTg-BKC6_Ni7boqw2Su2AhJaq14_Rc2tXtKpe8e65BNWp6QLdY5ehRxYuYktILR5KuBkdmsXK9gdG-r0U24F9Y5N-VcyHqfJ616W8mgtT_Ru7Zb5aGqhuq-NHTQkL2UsXI1-RKoNAANeUcZSP_HuFPeUqy-RXzyhKoYDcMsLSbxmI8fea"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h2 class="text-xl font-headline font-semibold text-on-background group-hover:text-primary transition-colors">Nocturne Boot</h2>
+<p class="text-on-surface-variant text-sm mt-1">Bitter Cocoa Suede</p>
+</div>
+<span class="text-lg font-headline font-light text-on-surface">$465</span>
+</div>
+<div class="mt-4 flex gap-2">
+<div class="w-3 h-3 rounded-full bg-[#3d2b1f]"></div>
+</div>
+</div>
+</div>
+<div class="mt-32 flex justify-center">
+<button class="group flex flex-col items-center gap-4">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">Scroll to explore further</span>
+<div class="w-px h-16 bg-outline-variant overflow-hidden">
+<div class="w-full h-full bg-primary -translate-y-full group-hover:translate-y-0 transition-transform duration-700"></div>
+</div>
+</button>
+</div>
+</section>
+</div>
+</main>
+<footer class="w-full mt-24 bg-[#dbdad7] dark:bg-[#1a1c1a]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-[1920px] mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-bold text-[#8b4f2d] dark:text-[#e69b73] font-headline">PALET</div>
+<p class="font-body text-sm text-[#5d4037] dark:text-[#dbdad7] leading-relaxed max-w-xs">
+                    Curating the finest Italian suede with a commitment to tactile excellence and architectural form.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Manrope'] text-sm uppercase tracking-widest text-[#8b4f2d] dark:text-[#e69b73] font-bold">Inquiry</h4>
+<ul class="space-y-4 font-['Manrope'] text-sm uppercase tracking-widest">
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] hover:underline transition-all underline-offset-4" href="#">Sustainability</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] hover:underline transition-all underline-offset-4" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] hover:underline transition-all underline-offset-4" href="#">Privacy</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] hover:underline transition-all underline-offset-4" href="#">Store Locator</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Manrope'] text-sm uppercase tracking-widest text-[#8b4f2d] dark:text-[#e69b73] font-bold">Connect</h4>
+<ul class="space-y-4 font-['Manrope'] text-sm uppercase tracking-widest">
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] hover:underline transition-all underline-offset-4" href="#">Instagram</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] hover:underline transition-all underline-offset-4" href="#">Journal</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] hover:underline transition-all underline-offset-4" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Manrope'] text-sm uppercase tracking-widest text-[#8b4f2d] dark:text-[#e69b73] font-bold">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-[#8b4f2d] py-2 focus:outline-none font-body text-sm text-on-surface" placeholder="Email Address" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-[#8b4f2d]">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="px-12 pb-12 w-full max-w-[1920px] mx-auto border-t border-[#8b4f2d]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7]">© 2024 PALET. The Suede Gallery. All rights reserved.</span>
+<div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+<span>London</span>
+<span>Milan</span>
+<span>Tokyo</span>
+</div>
+</div>
+</footer>
+</body></html>

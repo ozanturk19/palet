@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dbdad7",
+                        "inverse-on-surface": "#f2f1ee",
+                        "primary-fixed": "#ffdbca",
+                        "background": "#faf9f6",
+                        "primary-fixed-dim": "#ffb690",
+                        "error-container": "#ffdad6",
+                        "outline": "#85736b",
+                        "secondary-container": "#fed3c7",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#e7bdb1",
+                        "on-background": "#1a1c1a",
+                        "on-tertiary-fixed": "#281801",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#53443c",
+                        "on-surface": "#1a1c1a",
+                        "inverse-primary": "#ffb690",
+                        "secondary-fixed": "#ffdbd0",
+                        "outline-variant": "#d8c2b8",
+                        "inverse-surface": "#2f312f",
+                        "tertiary": "#725a39",
+                        "surface-tint": "#8b4f2d",
+                        "surface-container-low": "#f4f3f1",
+                        "on-tertiary-container": "#513d1e",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-fixed": "#331100",
+                        "surface-bright": "#faf9f6",
+                        "on-primary-container": "#663212",
+                        "on-secondary-fixed-variant": "#5d4037",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#584324",
+                        "surface-container": "#efeeeb",
+                        "on-secondary-fixed": "#2c160e",
+                        "surface": "#faf9f6",
+                        "tertiary-fixed": "#feddb3",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#e1c299",
+                        "primary": "#8b4f2d",
+                        "on-secondary-container": "#795950",
+                        "secondary": "#77574d",
+                        "primary-container": "#e69b73",
+                        "tertiary-container": "#c5a881",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e9e8e5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#6e3818",
+                        "surface-variant": "#e3e2e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-subtle {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #faf9f6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d8c2b8;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/70 dark:bg-[#1a1c1a]/70 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-3xl font-bold tracking-tighter text-[#8b4f2d] dark:text-[#e69b73] font-['Epilogue']" href="#">PALET</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">Suede Boots</a>
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">Loafers</a>
+<a class="font-['Manrope'] body text-[#8b4f2d] dark:text-[#e69b73] border-b-2 border-[#8b4f2d] dark:border-[#e69b73] pb-1" href="#">Derbies</a>
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">Care Kit</a>
+<a class="font-['Manrope'] body text-[#5d4037] dark:text-[#dbdad7] hover:text-[#8b4f2d] dark:hover:text-[#e69b73] transition-colors duration-300" href="#">The Monograph</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#8b4f2d] p-2 hover:bg-surface-container transition-all">person</button>
+<button class="material-symbols-outlined text-[#8b4f2d] p-2 hover:bg-surface-container transition-all">shopping_bag</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-[1920px] mx-auto">
+<!-- Product Detail Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+<!-- Left: High Quality Imagery (Asymmetric Layout) -->
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="col-span-1 md:col-span-2 overflow-hidden aspect-[4/5] bg-surface-container">
+<img alt="Tan suede derby shoe" class="w-full h-full object-cover" data-alt="Close-up of a premium tan suede derby shoe showing detailed nap and fine stitching against a warm minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBlDaJpOsJ2d9hC0ktXpWlg2wfPs0p7ZMSTXISPbfSK8t-8vCHZmETbjAKzlj9pqGCjCeU98lv1DUan26ZQuAIiJGFGS7MkF1ZGvvWtxelyu50fIfBY9Du2muHmUv8P1pt9ghHKS3eUIgMUBf5u0SL95gx61017CCP48uormewOJBHBHHlhwPdb1CIbRQDwAXY5FmMxsRK-R4p_gmt9ErWnrWeNSS3LWQ7afeEkVWB0-IUVzIMW2f7Y1ieF9udtJ8QZ54dHRM3D3MV"/>
+</div>
+<div class="overflow-hidden aspect-square bg-surface-container-low mt-4">
+<img alt="Suede texture detail" class="w-full h-full object-cover" data-alt="Extreme macro shot of Italian suede leather texture highlighting the soft fibers and golden tan hue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU_jIZHNKsyqIeqhE4UlQNtQlM-7wE1mNM1pJZ22pw7UHsfzZr6oZlCOR6AS2JNFdJQP_XmCfvZiF7MLYmfE-VXs5Rn3bc2bw1HdTeqRpyaIbG8q7KGbgw6oGc7HLrZf7hsX4Hc2NRzNI0LB5W3j8IAqT5acxYwSEpwqy76ihkkr0fyD0p1j8FPYB0dyUhQz28BkGYJkpLmaYCxaMhplXoVmb0mms6SwBTzbsIlSnEDB1YZxYGfvNbY-FdImT933opsR05rx2sINIc"/>
+</div>
+<div class="overflow-hidden aspect-square bg-surface-container-low mt-12">
+<img alt="Shoe sole detail" class="w-full h-full object-cover" data-alt="Detail of the leather sole and stacked heel of a derby shoe on a neutral stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBujsbjLcxeVXWlM8IjpFzi9IT6dVNCcmQHQm0WkVv-SHOyuH8LLZD0Il41xEbm1M4veiStqzbt12wzyguE-su1pNts-9lMMpBsAlo8fRaPzcLjcF1GwrziTk9QV2M7SnJ-PsRBVaM0GoJTLjp7qHQqXlXBrQmYXJtLcx545f04WNmKuRzGH8Azi5-LlpRuaPbuRKAorZmOI9Gb8KbquK2mjDFVllnYwQTnpFCoh1JF-zL14UGGk1-gMEHHx-msqh7ssJQhEpe4ovek"/>
+</div>
+</div>
+<!-- Right: Details Section (Sticky) -->
+<div class="lg:col-span-5 lg:sticky lg:top-40">
+<div class="space-y-8">
+<div class="space-y-2">
+<span class="text-xs font-label tracking-widest uppercase text-tertiary-container">The Heritage Collection</span>
+<h1 class="text-5xl md:text-6xl font-headline font-bold tracking-tighter text-on-background">The Suede Derby</h1>
+<p class="text-2xl font-body text-primary font-semibold">$345.00</p>
+</div>
+<div class="space-y-6 py-8 border-y border-outline-variant/20">
+<p class="text-lg leading-relaxed text-on-surface-variant font-body">
+                            Meticulously crafted from premium Italian suede, The Derby represents the pinnacle of tactile luxury. Featuring a blake-stitched leather sole and a breathable calfskin lining, it offers a soft, glove-like fit that adapts to your stride. A masterclass in understated elegance.
+                        </p>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="text-sm font-label uppercase tracking-wider text-on-surface">Responsibly Sourced Suede</span>
+</div>
+</div>
+<!-- Selectors -->
+<div class="space-y-10">
+<!-- Color Selector -->
+<div class="space-y-4">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Color: Apricot</span>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-full bg-[#e69b73] border-2 border-primary ring-2 ring-offset-2 ring-transparent transition-all" title="Apricot"></button>
+<button class="w-10 h-10 rounded-full bg-[#c5a881] border-2 border-transparent hover:border-outline-variant transition-all" title="Sand"></button>
+<button class="w-10 h-10 rounded-full bg-[#5d4037] border-2 border-transparent hover:border-outline-variant transition-all" title="Chocolate"></button>
+</div>
+</div>
+<!-- Size Selector -->
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Select Size (EU)</span>
+<button class="text-xs font-label uppercase tracking-widest text-primary underline underline-offset-4">Size Guide</button>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<button class="py-3 border border-outline-variant/30 text-sm font-body hover:bg-surface-container transition-all">38</button>
+<button class="py-3 border border-outline-variant/30 text-sm font-body hover:bg-surface-container transition-all">39</button>
+<button class="py-3 border border-primary text-sm font-body bg-surface-container-high font-bold">40</button>
+<button class="py-3 border border-outline-variant/30 text-sm font-body hover:bg-surface-container transition-all">41</button>
+<button class="py-3 border border-outline-variant/30 text-sm font-body hover:bg-surface-container transition-all">42</button>
+<button class="py-3 border border-outline-variant/30 text-sm font-body hover:bg-surface-container transition-all">43</button>
+<button class="py-3 border border-outline-variant/30 text-sm font-body hover:bg-surface-container transition-all">44</button>
+<button class="py-3 border border-outline-variant/30 text-sm font-body hover:bg-surface-container transition-all">45</button>
+</div>
+</div>
+<!-- Add to Bag -->
+<div class="space-y-4">
+<button class="w-full py-5 bg-primary text-on-primary font-label uppercase tracking-widest text-sm font-bold rounded-none hover:bg-opacity-90 transition-all flex items-center justify-center gap-3">
+                                Add to Bag
+                                <span class="material-symbols-outlined text-lg">shopping_bag</span>
+</button>
+<p class="text-center text-xs text-on-surface-variant font-body">Complimentary carbon-neutral shipping on all orders.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Styled With Section (Bento Inspired) -->
+<section class="mt-48 space-y-16">
+<div class="text-center space-y-4">
+<h2 class="text-4xl font-headline font-bold tracking-tighter">Styled With</h2>
+<div class="h-1 w-12 bg-primary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Related Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container mb-6">
+<img alt="Linen Trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Pair of folded premium cream linen trousers on a textured stone surface with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCosRLw7pEK8q-BtTNlEZh6t2ixgPk2OkJDLpvnlGco3Ln64YenmM6gkkSdColz5BsmqrbwLEFF-BaDh6IatQjuE2bGs6adOJzafrBalWIVAXsT-sDqcGKcjr6sMK4Z4N0EmokIALNGPl2TI_EfrDkoNvpnGgP13u5NtJbPgpine-SrejI9uPecLvvK5cTxY1ouE-eSv_GHLhGXHOvLF5gjL9S_BhBvPkRAnwbqkLTkvHq3V9nVGIDnYQBEM3UNuh3TPmL8-XPNKmAv"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Apparel</p>
+<h3 class="text-lg font-body font-bold">The Raw Linen Trouser</h3>
+</div>
+<p class="text-sm font-body text-primary">$180</p>
+</div>
+</div>
+<!-- Related Item 2 -->
+<div class="group cursor-pointer translate-y-12">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container mb-6">
+<img alt="Suede Jacket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Lightweight tobacco-colored suede bomber jacket hanging against a minimalist white gallery wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdlKsp5Ooe3KKIVf8ISoCqf0WqHwd6M_DLvnfkrTBAJnGhfKVy4ta4FU-PAaC8Rya5TtRortzOABPIdf3PvLL-VzvjGtROhb7yu5WnjEByosOh0IweGqcRPNEUod2gww-MLlf9JPSXY7mY9iPfZvd7lSqByQ74s_6iSMym0a9vh2R3P5j8HRzQh3beN0YuMf_2WRwFp1hsV8Pize_erIPY83LT_xipv1Yx_FszjSkVanMyx4WlrVRXNNxIj2kHfD-xzzDIQUDnq-IE"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Outerwear</p>
+<h3 class="text-lg font-body font-bold">The Summer Suede Bomber</h3>
+</div>
+<p class="text-sm font-body text-primary">$850</p>
+</div>
+</div>
+<!-- Related Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container mb-6">
+<img alt="Leather Belt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Hand-stitched tan leather belt with a brushed brass buckle coiled on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi9D21Zc1nQK1yFBR3eB0OvVRv3I-wSsvY0IgqOBDsiE8xcTIZFHNpTmRxes8QFSY6gMwrLzRj9at0GLKMdcR-vdSI-BLRJ-RBpuRwd-XTXcFZ2GV4MjgOC_Y_o-jiECo_S7iH8MWvAhe4ZT5m71vaSGwecCAZPnbMP7M_Vi367HWJK0V2kKJJvef6SyroYt-7Xz_6SIweaetv2cz_VlUSo41f54vO8rE2tfexxv9CPJ5cJ7zJLnXlct8BJi_OL5UoxU3wDU2sWiSX"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Accessories</p>
+<h3 class="text-lg font-body font-bold">The Artisan Belt</h3>
+</div>
+<p class="text-sm font-body text-primary">$95</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-[#dbdad7] dark:bg-[#1a1c1a]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-20 w-full">
+<div class="space-y-6">
+<span class="text-xl font-bold text-[#8b4f2d] dark:text-[#e69b73] font-['Epilogue']">PALET</span>
+<p class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] leading-relaxed max-w-xs">
+                    Curating the world's finest suede. A digital gallery dedicated to texture, craft, and the enduring beauty of artisanal footwear.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Manrope'] text-sm uppercase tracking-widest font-bold text-[#5d4037] dark:text-[#efeeeb]">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] uppercase tracking-widest hover:underline transition-all underline-offset-4" href="#">Sustainability</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] uppercase tracking-widest hover:underline transition-all underline-offset-4" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] uppercase tracking-widest hover:underline transition-all underline-offset-4" href="#">Privacy</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] uppercase tracking-widest hover:underline transition-all underline-offset-4" href="#">Store Locator</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Manrope'] text-sm uppercase tracking-widest font-bold text-[#5d4037] dark:text-[#efeeeb]">Follow</h4>
+<ul class="space-y-4">
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] uppercase tracking-widest hover:underline transition-all underline-offset-4" href="#">Instagram</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] uppercase tracking-widest hover:underline transition-all underline-offset-4" href="#">Pinterest</a></li>
+<li><a class="text-[#5d4037] dark:text-[#dbdad7] text-sm font-['Manrope'] uppercase tracking-widest hover:underline transition-all underline-offset-4" href="#">The Monograph</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-['Manrope'] text-sm uppercase tracking-widest font-bold text-[#5d4037] dark:text-[#efeeeb]">Newsletter</h4>
+<div class="space-y-4">
+<p class="text-[#5d4037] dark:text-[#dbdad7] text-xs font-['Manrope'] uppercase tracking-widest">Join our inner circle for early access.</p>
+<div class="relative group">
+<input class="w-full bg-transparent border-b border-[#5d4037] py-2 focus:outline-none focus:border-[#8b4f2d] transition-all text-sm font-['Manrope'] uppercase tracking-widest placeholder:text-[#5d4037]/50" placeholder="Email Address" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-[#8b4f2d]">arrow_forward</button>
+</div>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-[#5d4037]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Manrope'] text-sm uppercase tracking-widest text-[#5d4037] dark:text-[#dbdad7] opacity-60">© 2024 PALET. The Suede Gallery. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-[#5d4037] dark:text-[#dbdad7] opacity-60">payments</span>
+<span class="material-symbols-outlined text-[#5d4037] dark:text-[#dbdad7] opacity-60">credit_card</span>
+</div>
+</div>
+</footer>
+</body></html>
