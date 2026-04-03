@@ -28,8 +28,7 @@ jobs:
             if ! command -v docker &> /dev/null; then
               apt-get update -qq
               apt-get install -y -qq docker.io git
-              systemctl enable docker
-              systemctl start docker
+              systemctl enable docker && systemctl start docker
               echo "Docker kuruldu"
             else
               echo "Docker mevcut: $(docker --version)"
@@ -40,10 +39,7 @@ jobs:
         run: |
           ssh root@135.181.206.109 '
             if [ -d /opt/palet ]; then
-              cd /opt/palet
-              git fetch origin
-              git checkout main
-              git pull origin main
+              cd /opt/palet && git fetch origin && git checkout main && git pull origin main
             else
               git clone -b main https://github.com/ozanturk19/palet.git /opt/palet
             fi
@@ -54,19 +50,16 @@ jobs:
           ssh root@135.181.206.109 '
             cd /opt/palet/web
             docker build -t palet-web:latest .
-            echo "Build tamamlandı"
           '
 
       - name: Deploy container on VPS
         run: |
           ssh root@135.181.206.109 << 'ENDSSH'
-            # Firewall
             ufw allow 8007/tcp 2>/dev/null || true
             ufw reload 2>/dev/null || true
             iptables -C INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || \
               iptables -I INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || true
 
-            # Container yeniden başlat
             docker stop palet-web 2>/dev/null || true
             docker rm   palet-web 2>/dev/null || true
             docker run -d \
@@ -78,61 +71,19 @@ jobs:
               palet-web:latest
 
             sleep 10
-
-            # Durum raporu — başarısız olsa bile devam et
-            echo "=== docker ps ==="
-            docker ps -a | grep palet || echo "container bulunamadı"
-
-            echo "=== container logs ==="
-            docker logs palet-web --tail 30 2>&1 || true
-
-            echo "=== port ==="
-            ss -tlnp | grep 8007 || echo "8007 dinlenmiyor"
-
-            echo "=== localhost curl ==="
-            curl -s -o /dev/null -w "HTTP %{http_code}\n" http://localhost:8007 || echo "curl başarısız"
+            docker ps | grep palet-web || (echo "HATA: container çalışmıyor"; docker logs palet-web; exit 1)
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8007)
+            echo "Localhost HTTP: $STATUS"
+            [ "$STATUS" = "200" ] || (echo "HATA: localhost $STATUS"; docker logs palet-web --tail 20; exit 1)
           ENDSSH
 
       - name: External health check
         run: |
-          echo "GitHub Actions runner'dan dış erişim testi..."
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 http://135.181.206.109:8007 || echo "TIMEOUT")
-          echo "Dış HTTP Status: $STATUS"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 http://135.181.206.109:8007)
+          echo "Dış erişim HTTP: $STATUS"
           if [ "$STATUS" = "200" ]; then
-            echo "✅ Site dışarıdan erişilebilir!"
+            echo "✅ http://135.181.206.109:8007 — CANLI"
           else
-            echo "❌ Dış erişim yok (Status: $STATUS) — Hetzner cloud firewall kontrol edilmeli"
+            echo "❌ Dış erişim yok ($STATUS) — Hetzner cloud firewall'da port 8007 açılmalı"
+            exit 1
           fi
-
-      - name: Save diagnostics to repo
-        run: |
-          ssh root@135.181.206.109 << 'ENDSSH' > diagnostics.txt 2>&1
-            echo "=== docker ps -a ==="
-            docker ps -a
-
-            echo ""
-            echo "=== palet-web logs ==="
-            docker logs palet-web --tail 40 2>&1 || echo "log yok"
-
-            echo ""
-            echo "=== ss port 8007 ==="
-            ss -tlnp | grep 8007 || echo "8007 YOK"
-
-            echo ""
-            echo "=== localhost curl verbose ==="
-            curl -sv http://localhost:8007 2>&1 | tail -30
-
-            echo ""
-            echo "=== ufw status ==="
-            ufw status verbose 2>/dev/null || echo "ufw yok"
-
-            echo ""
-            echo "=== iptables ==="
-            iptables -L INPUT -n --line-numbers 2>/dev/null | head -30
-          ENDSSH
-
-          git config user.email "deploy@palet.app"
-          git config user.name "PALET Deploy Bot"
-          git add diagnostics.txt
-          git diff --staged --quiet || git commit -m "chore: diagnostics [skip ci]"
-          git push origin main
