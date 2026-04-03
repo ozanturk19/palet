@@ -14,7 +14,7 @@ export default function UrunDetayPage() {
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="col-span-1 md:col-span-2 overflow-hidden aspect-[4/5] bg-surface-container relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBlDaJpOsJ2d9hC0ktXpWlg2wfPs0p7ZMSTXISPbfSK8t-8vCHZmETbjAKzlj9pqGCjCeU98lv1DUan26ZQuAIiJGFGS7MkF1ZGvvWtxelyu50fIfBY9Du2muHmUv8P1pt9ghHKS3eUIgMUBf5u0SL95gx61017CCP48uormewOJBHBHHlhwPdb1CIbRQDwAXY5FmMxsRK-R4p_gmt9ErWnrWeNSS3LWQ7afeEkVWB0-IUVzIMW2f7Y1ieF9udtJ8QZ54dHRM3D3MV"
+                src="/images/detail-1.jpg"
                 alt="Premium tan süet derby ayakkabı"
                 fill
                 className="object-cover"
@@ -23,7 +23,7 @@ export default function UrunDetayPage() {
             </div>
             <div className="overflow-hidden aspect-square bg-surface-container-low mt-4 relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU_jIZHNKsyqIeqhE4UlQNtQlM-7wE1mNM1pJZ22pw7UHsfzZr6oZlCOR6AS2JNFdJQP_XmCfvZiF7MLYmfE-VXs5Rn3bc2bw1HdTeqRpyaIbG8q7KGbgw6oGc7HLrZf7hsX4Hc2NRzNI0LB5W3j8IAqT5acxYwSEpwqy76ihkkr0fyD0p1j8FPYB0dyUhQz28BkGYJkpLmaYCxaMhplXoVmb0mms6SwBTzbsIlSnEDB1YZxYGfvNbY-FdImT933opsR05rx2sINIc"
+                src="/images/detail-2.jpg"
                 alt="Süet doku detayı"
                 fill
                 className="object-cover"
@@ -31,7 +31,7 @@ export default function UrunDetayPage() {
             </div>
             <div className="overflow-hidden aspect-square bg-surface-container-low mt-12 relative">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBujsbjLcxeVXWlM8IjpFzi9IT6dVNCcmQHQm0WkVv-SHOyuH8LLZD0Il41xEbm1M4veiStqzbt12wzyguE-su1pNts-9lMMpBsAlo8fRaPzcLjcF1GwrziTk9QV2M7SnJ-PsRBVaM0GoJTLjp7qHQqXlXBrQmYXJtLcx545f04WNmKuRzGH8Azi5-LlpRuaPbuRKAorZmOI9Gb8KbquK2mjDFVllnYwQTnpFCoh1JF-zL14UGGk1-gMEHHx-msqh7ssJQhEpe4ovek"
+                src="/images/detail-3.jpg"
                 alt="Taban detayı"
                 fill
                 className="object-cover"
@@ -146,21 +146,21 @@ export default function UrunDetayPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCosRLw7pEK8q-BtTNlEZh6t2ixgPk2OkJDLpvnlGco3Ln64YenmM6gkkSdColz5BsmqrbwLEFF-BaDh6IatQjuE2bGs6adOJzafrBalWIVAXsT-sDqcGKcjr6sMK4Z4N0EmokIALNGPl2TI_EfrDkoNvpnGgP13u5NtJbPgpine-SrejI9uPecLvvK5cTxY1ouE-eSv_GHLhGXHOvLF5gjL9S_BhBvPkRAnwbqkLTkvHq3V9nVGIDnYQBEM3UNuh3TPmL8-XPNKmAv",
+                img: "/images/styled-1.jpg",
                 category: "Giyim",
                 name: "The Raw Linen Trouser",
                 price: "₺1.490",
                 offset: "",
               },
               {
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDdlKsp5Ooe3KKIVf8ISoCqf0WqHwd6M_DLvnfkrTBAJnGhfKVy4ta4FU-PAaC8Rya5TtRortzOABPIdf3PvLL-VzvjGtROhb7yu5WnjEByosOh0IweGqcRPNEUod2gww-MLlf9JPSXY7mY9iPfZvd7lSqByQ74s_6iSMym0a9vh2R3P5j8HRzQh3beN0YuMf_2WRwFp1hsV8Pize_erIPY83LT_xipv1Yx_FszjSkVanMyx4WlrVRXNNxIj2kHfD-xzzDIQUDnq-IE",
+                img: "/images/styled-2.jpg",
                 category: "Dış Giyim",
                 name: "Summer Suede Bomber",
                 price: "₺6.900",
                 offset: "translate-y-12",
               },
               {
-                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCi9D21Zc1nQK1yFBR3eB0OvVRv3I-wSsvY0IgqOBDsiE8xcTIZFHNpTmRxes8QFSY6gMwrLzRj9at0GLKMdcR-vdSI-BLRJ-RBpuRwd-XTXcFZ2GV4MjgOC_Y_o-jiECo_S7iH8MWvAhe4ZT5m71vaSGwecCAZPnbMP7M_Vi367HWJK0V2kKJJvef6SyroYl5QxU3wDU2sWiSX",
+                img: "/images/styled-3.jpg",
                 category: "Aksesuar",
                 name: "The Artisan Belt",
                 price: "₺890",

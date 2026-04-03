@@ -23,7 +23,7 @@ const chapters = [
       "Cevap basitti — kimse bu arayı doldurmaya çalışmamıştı. Biz o arayı doldurmak için yola çıktık.",
     ],
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAAW-4nnSmbasOV7KLEqjRre5ZUoYmJ3buNJOcwuqb2Bj1Cha8Zi-44WcATmyhnqzgI_RtxqY9xgZOBgut8lz2M_Ak4-2nDTC_0yFNBuG6BpAXAWtepUvrxntcDF-KVWlYdcuVkv0YzU-THUQhGlvXYDS7hm9xot24SB5zwhbVYNPmyr67ysEJ_c44gQ5h405tfyo1xb-FTMGQ_EKJqLDKE4gR-T8nN6Z6cPsEW-3ZSh0ruVUH9_FG7dnbgkHbHvLOFlJFEpG3e84WM",
+      "/images/hero-suede.jpg",
     imageAlt: "Atölye — başlangıç",
     imagePosition: "right" as const,
   },
@@ -35,7 +35,7 @@ const chapters = [
       "Her derinin 'nap' kalitesini — yani yüzeyin kadifemsi dokusunu ve yoğunluğunu — gözle ve elle kontrol eden ustalar var burada. Bir rule of thumb var atölyede: 'Tereddüt varsa, geçilir.' Sadece en iyi çeyrek malzeme üretime girer.",
     ],
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC7bxTji9p5cAYZwSvZNHsWonW49YPk5vBJyL_iyQ7_xtGniG3CfD9aQ84_A-QF-G6comwSdQFN1zUsvZJsQrW4EP1xqlZwJThS7Rbj5UgmafhbSzBFioNlIBsl6rnZBwIGnENXt860FouqVI21EfyWLqbfY44kGuxfCeP-ziAOFYl_qih__-tIvzosNXZrEK4f1F2FBokwIz4s24sm-CZVcbAWiY_nBtUbeS4x4SJeXruQn7sIaYbKama4nzjR11zRnZk_CBkQtPV8",
+      "/images/atelier.jpg",
     imageAlt: "Tuscan atölyesi",
     imagePosition: "left" as const,
   },
@@ -47,7 +47,7 @@ const chapters = [
       "Neden? Çünkü süet, hata affetmez. Yanlış bir kesim, fazla bir baskı — deri bunu sonsuza kadar saklar. Yavaş çalışmak bir tercih değil, materyalin zorunluluğu.",
     ],
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBzUtz35Igroo3MRO8QM4EFdcqYv9paTceEHwnGeTZ_Kwmxv5cHPU84hnycgXHQ6noizkqDNuTL3b-cQ2kM_2TzvYMx8mkcw0k4c_yeZ8VhCd6VPgMVoKLeBxJyrlQp0AMfa5N0Aim-xoHL6N-GPXEL9DtK-vnDsVKPbt6mixJpvVSRoRobWacB6gBi6yCm0oSZVtJwdZtFGMTskHWzDiedT41Dt4bVsna_hLIeZ_VxyezXvDtwbvec7u9veMZoQ2ntAhCohpFvAHju",
+      "/images/chelsea-ii.jpg",
     imageAlt: "El işçiliği",
     imagePosition: "right" as const,
   },

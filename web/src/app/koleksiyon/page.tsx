@@ -11,7 +11,7 @@ const products = [
     price: "₺3.290",
     badge: "Limited",
     colors: ["#3d2b1f", "#8b4f2d"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDTUZkQY_QN0bCqBuLHneF5L64BHN86pK7mnEo15XVyHQoRioNBIMQ7MYcGt5Jmj7vlz7KRGJ7GQWLduYCu4ppqn6udgxAfckLzxGTTISQ0u2cMLLZ7ax9HuOEK8p4KLloc93vW6cR_texyyhkbYzmVmiA8jVl5HrnkF19_myU6oCJibcxqE3OIrtNPGeLXf7lWBmR-K-nT5nsOAwCB-U6uyBDAQ5SCv5jfzUvfKUFO40aKbZJzCKkeADH3cSG0kw7AvGuWsKRTKf_h",
+    img: "/images/product-1.jpg",
     offset: false,
   },
   {
@@ -21,7 +21,7 @@ const products = [
     price: "₺2.690",
     badge: null,
     colors: ["#dbdad7", "#c5a881", "#e69b73"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCweEqWRczKkmndYLKyj5rNG9NMQBnbDAOP0menQ1T3W3jWBQZeUBl77LfbiqfBixIQHxxiN5EnAja9MQAeIbRKfnfHjOGob8osBj288edC_tmcAnKvICRTxJmYHoZwHYs0gANBedEv-OZZDHFCCpA1xqqIBE9TUqZeQA1VCofk5TMl2Ad8-lj4liYIo5mCAiIgCBMAP4GsiZ1VKDnifBr_YnKgP7Usu1LJ7l3ohS26UfhkhDN575GxYppTyxiHF9xSyOBhBIZUOKD8",
+    img: "/images/product-2.jpg",
     offset: true,
   },
   {
@@ -31,7 +31,7 @@ const products = [
     price: "₺2.890",
     badge: null,
     colors: ["#e69b73"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyN-tODtwQFfptMNBDDDOuzc9NkitPW09ibZpYOS-j8oLFvcRIpFP5RK42LppjbI3_v8Pj6ahOzrZ37OE7H6eyPZkTT4WIebfeXQPeoWaR4Sn1ioveekwkPNTzTBIjkncYxsPH3y85QE2SMGjaDqbnlO8zBCb-qwhTLhn5fL5WTE21zVM_3ZPTC1hoo_VF8_b1TlxV0GNeetkTFR4_gdwA_CZ15e7gEvKh1ZOf8_PNd7XsrhpEO76cok_FhK8cyOUtsUI5KiRCYrEU",
+    img: "/images/product-3.jpg",
     offset: false,
   },
   {
@@ -41,7 +41,7 @@ const products = [
     price: "₺3.490",
     badge: null,
     colors: ["#3d2b1f"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjEDaGbqtf6mgxSvUP14KRTpOLxn9pnoZ_zevO3SE0R693J-ZcYtHbm718iO-JZr2bLLLLOK964yOZ9qFE3aiHJBjIoLiDTg-BKC6_Ni7boqw2Su2AhJaq14_Rc2tXtKpe8e65BNWp6QLdY5ehRxYuYktILR5KuBkdmsXK9gdG-r0U24F9Y5N-VcyHqfJ616W8mgtT_Ru7Zb5aGqhuq-NHTQkL2UsXI1-RKoNAANeUcZSP_HuFPeUqy-RXzyhKoYDcMsLSbxmI8fea",
+    img: "/images/product-4.jpg",
     offset: true,
   },
 ];

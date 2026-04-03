@@ -43,7 +43,7 @@ export default function HomePage() {
             <div className="md:col-span-7 relative">
               <div className="aspect-[4/5] bg-surface-container-low rounded-sm overflow-hidden relative">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAW-4nnSmbasOV7KLEqjRre5ZUoYmJ3buNJOcwuqb2Bj1Cha8Zi-44WcATmyhnqzgI_RtxqY9xgZOBgut8lz2M_Ak4-2nDTC_0yFNBuG6BpAXAWtepUvrxntcDF-KVWlYdcuVkv0YzU-THUQhGlvXYDS7hm9xot24SB5zwhbVYNPmyr67ysEJ_c44gQ5h405tfyo1xb-FTMGQ_EKJqLDKE4gR-T8nN6Z6cPsEW-3ZSh0ruVUH9_FG7dnbgkHbHvLOFlJFEpG3e84WM"
+                  src="/images/hero-suede.jpg"
                   alt="PALLET premium erkek süet ayakkabı"
                   fill
                   className="object-cover"
@@ -88,7 +88,7 @@ export default function HomePage() {
               <Link href="/urun/mercer-loafer" className="md:col-span-2 row-span-2 group cursor-pointer">
                 <div className="bg-surface relative overflow-hidden mb-6 aspect-square md:aspect-auto md:h-[480px]">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm70400yrFvZnRcTwOsHw6zKvWRIc12riTBoxtHQgTAbdZ3dgMSLNJuB2t0K7GRCh2Q26KUETNJYOhxRJRixjmwSs8Mu-KzfENVgPjg0OxP8ZUKzQUQsZCBw7N2rCHTSddlVBjaUxnAgBTr35d6PNPO9fu_SpAsOvsK1d4Ib3MrB6QgqXpO_Z3zhJvO6hXL4nWjoEd6aY-D4kkbELgNdfZ7Uw-POrcwp9FT_9N2fR6yxylzDJ0zwO2CO5e-h54M0mETiaw9wqVPP6c"
+                    src="/images/mercer-loafer.jpg"
                     alt="Mercer Loafer"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -107,7 +107,7 @@ export default function HomePage() {
               <Link href="/urun/chelsea-ii" className="group cursor-pointer">
                 <div className="bg-surface relative overflow-hidden mb-6 aspect-square">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzUtz35Igroo3MRO8QM4EFdcqYv9paTceEHwnGeTZ_Kwmxv5cHPU84hnycgXHQ6noizkqDNuTL3b-cQ2kM_2TzvYMx8mkcw0k4c_yeZ8VhCd6VPgMVoKLeBxJyrlQp0AMfa5N0Aim-xoHL6N-GPXEL9DtK-vnDsVKPbt6mixJpvVSRoRobWacB6gBi6yCm0oSZVtJwdZtFGMTskHWzDiedT41Dt4bVsna_hLIeZ_VxyezXvDtwbvec7u9veMZoQ2ntAhCohpFvAHju"
+                    src="/images/chelsea-ii.jpg"
                     alt="Chelsea II"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -120,7 +120,7 @@ export default function HomePage() {
               <Link href="/urun/city-derby" className="group cursor-pointer">
                 <div className="bg-surface relative overflow-hidden mb-6 aspect-square">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZa7DkM2TJDQCQrXyEDT00c2Kj5u3ex3Xz_uzw0P2PLC2ksBWGqDTXH3xBfcDfTdf3g4IQlSD3cmKGYNBZAVA78zcx2QtGyA3Rwl11Ala13kjlfs3xLXcg-5MPtKRZxq2ZmrmVBTcPBIUYJYVx1OisZEbTYtOU9Nqqe5UCZSH4pVCwtPc6GECR6J3IcX2QRnBXvsbmBMcJRRMgyF0NwctYiuUz6Vatqwj2ml0NTkR3H"
+                    src="/images/city-derby.jpg"
                     alt="City Derby"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -156,7 +156,7 @@ export default function HomePage() {
               <div className="md:col-span-6 relative">
                 <div className="w-4/5 aspect-[3/4] bg-surface-container overflow-hidden relative">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7bxTji9p5cAYZwSvZNHsWonW49YPk5vBJyL_iyQ7_xtGniG3CfD9aQ84_A-QF-G6comwSdQFN1zUsvZJsQrW4EP1xqlZwJThS7Rbj5UgmafhbSzBFioNlIBsl6rnZBwIGnENXt860FouqVI21EfyWLqbfY44kGuxfCeP-ziAOFYl_qih__-tIvzosNXZrEK4f1F2FBokwIz4s24sm-CZVcbAWiY_nBtUbeS4x4SJeXruQn7sIaYbKama4nzjR11zRnZk_CBkQtPV8"
+                    src="/images/atelier.jpg"
                     alt="Atölye"
                     fill
                     className="object-cover"
