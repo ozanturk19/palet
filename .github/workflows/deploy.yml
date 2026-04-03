@@ -48,8 +48,16 @@ jobs:
       - name: Build Docker image on VPS
         run: |
           ssh root@135.181.206.109 '
+            echo "=== Disk & Bellek ==="
+            df -h / && free -h
+
+            echo "=== Docker temizlik ==="
+            docker container prune -f
+            docker image prune -f
+
+            echo "=== Build ==="
             cd /opt/palet/web
-            docker build -t palet-web:latest .
+            docker build --progress=plain -t palet-web:latest . 2>&1
           '
 
       - name: Deploy container on VPS
