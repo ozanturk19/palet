@@ -93,6 +93,17 @@ jobs:
             curl -s -o /dev/null -w "HTTP %{http_code}\n" http://localhost:8007 || echo "curl başarısız"
           ENDSSH
 
+      - name: External health check
+        run: |
+          echo "GitHub Actions runner'dan dış erişim testi..."
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 http://135.181.206.109:8007 || echo "TIMEOUT")
+          echo "Dış HTTP Status: $STATUS"
+          if [ "$STATUS" = "200" ]; then
+            echo "✅ Site dışarıdan erişilebilir!"
+          else
+            echo "❌ Dış erişim yok (Status: $STATUS) — Hetzner cloud firewall kontrol edilmeli"
+          fi
+
       - name: Save diagnostics to repo
         run: |
           ssh root@135.181.206.109 << 'ENDSSH' > diagnostics.txt 2>&1
