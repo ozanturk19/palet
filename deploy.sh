@@ -1,37 +1,32 @@
 #!/bin/bash
 # PALET Web — VPS Deploy Script
-# VPS: 135.181.206.109 | Port: 8007
 # Kullanım: ./deploy.sh
+# Not: GitHub Actions ile aynı mekanizmayı (docker run) kullanır.
 
 set -e
 
 VPS_IP="135.181.206.109"
 VPS_USER="root"
-APP_DIR="/opt/palet"
-REPO="https://github.com/ozanturk19/palet.git"
-BRANCH="claude/brand-web-design-uWMjl"
 
-echo "==> PALET deploy başlıyor..."
+echo "==> PALET deploy başlıyor → $VPS_IP:8007"
 
 ssh ${VPS_USER}@${VPS_IP} << 'REMOTE'
   set -e
-
-  # Repo yoksa klonla, varsa güncelle
-  if [ ! -d /opt/palet ]; then
-    git clone https://github.com/ozanturk19/palet.git /opt/palet
-  fi
-
   cd /opt/palet
-  git fetch origin
-  git checkout claude/brand-web-design-uWMjl
-  git pull origin claude/brand-web-design-uWMjl
+  git pull origin main
 
   cd web
+  docker build -t palet-web:latest .
 
-  # Docker Compose ile build & start
-  docker compose down --remove-orphans || true
-  docker compose build --no-cache
-  docker compose up -d
+  docker stop palet-web 2>/dev/null || true
+  docker rm palet-web 2>/dev/null || true
+  docker run -d \
+    --name palet-web \
+    --restart unless-stopped \
+    -p 0.0.0.0:8007:8007 \
+    palet-web:latest
 
-  echo "==> Deploy tamamlandı. http://135.181.206.109:8007"
+  sleep 5
+  docker ps | grep palet-web
+  echo "==> Canlıda: http://135.181.206.109:8007"
 REMOTE

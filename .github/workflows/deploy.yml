@@ -3,7 +3,6 @@ name: Deploy PALET to VPS
 on:
   push:
     branches:
-      - claude/brand-web-design-uWMjl
       - main
   workflow_dispatch:
 
@@ -33,7 +32,7 @@ jobs:
               systemctl start docker
               echo "Docker kuruldu"
             else
-              echo "Docker zaten kurulu: $(docker --version)"
+              echo "Docker mevcut: $(docker --version)"
             fi
           '
 
@@ -43,10 +42,10 @@ jobs:
             if [ -d /opt/palet ]; then
               cd /opt/palet
               git fetch origin
-              git checkout ${{ github.ref_name }} 2>/dev/null || git checkout claude/brand-web-design-uWMjl
-              git pull origin ${{ github.ref_name }} 2>/dev/null || git pull origin claude/brand-web-design-uWMjl
+              git checkout main
+              git pull origin main
             else
-              git clone -b claude/brand-web-design-uWMjl https://github.com/ozanturk19/palet.git /opt/palet
+              git clone -b main https://github.com/ozanturk19/palet.git /opt/palet
             fi
           '
 
@@ -58,16 +57,12 @@ jobs:
             echo "Build tamamlandı"
           '
 
-      - name: Restart container on VPS
+      - name: Deploy container on VPS
         run: |
           ssh root@135.181.206.109 '
             # Firewall: port 8007 aç
-            if command -v ufw &> /dev/null; then
-              ufw allow 8007/tcp 2>/dev/null || true
-              ufw --force enable 2>/dev/null || true
-              echo "UFW: port 8007 açıldı"
-            fi
-            # iptables fallback
+            ufw allow 8007/tcp comment "Palet Web" 2>/dev/null || true
+            ufw reload 2>/dev/null || true
             iptables -C INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || \
               iptables -I INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || true
 
@@ -79,44 +74,12 @@ jobs:
               --restart unless-stopped \
               -p 0.0.0.0:8007:8007 \
               palet-web:latest
-            sleep 5
+
+            # Bekle ve doğrula
+            sleep 8
             docker ps | grep palet-web
-            curl -sf http://localhost:8007 > /dev/null && echo "✅ Localhost OK" || echo "⚠️ Localhost yanıt vermedi"
-            echo "✅ Deploy tamamlandı → http://135.181.206.109:8007"
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8007)
+            echo "Localhost HTTP Status: $STATUS"
+            [ "$STATUS" = "200" ] && echo "✅ Site canlıda → http://135.181.206.109:8007" || echo "⚠️ HTTP $STATUS — logları kontrol et"
+            docker logs palet-web --tail 10 2>&1
           '
-
-      - name: Diagnostics
-        run: |
-          ssh root@135.181.206.109 'bash -s' << '"DIAG"'
-            {
-              echo "=== Docker PS ==="
-              docker ps -a
-              echo ""
-              echo "=== Container Logs (son 20) ==="
-              docker logs palet-web --tail 20 2>&1 || echo "log yok"
-              echo ""
-              echo "=== Port 8007 ==="
-              ss -tlnp | grep 8007 || echo "HATA: 8007 dinlenmiyor!"
-              echo ""
-              echo "=== Localhost Curl ==="
-              curl -s -o /dev/null -w "HTTP Status: %{http_code}\n" http://localhost:8007 || echo "HATA: localhost curl başarısız"
-              echo ""
-              echo "=== UFW ==="
-              ufw status 2>/dev/null || echo "ufw yok"
-              echo ""
-              echo "=== iptables INPUT ==="
-              iptables -L INPUT -n --line-numbers 2>/dev/null | head -20
-            } > /tmp/palet_diag.txt 2>&1
-            cat /tmp/palet_diag.txt
-          DIAG
-
-      - name: Save diagnostics to repo
-        run: |
-          mkdir -p /tmp/diag
-          ssh root@135.181.206.109 'cat /tmp/palet_diag.txt' > /tmp/diag/output.txt
-          cp /tmp/diag/output.txt diagnostics.txt
-          git config user.email "deploy@palet.app"
-          git config user.name "PALET Deploy Bot"
-          git add diagnostics.txt
-          git diff --staged --quiet || git commit -m "chore: diagnostics output [skip ci]"
-          git push origin HEAD:claude/brand-web-design-uWMjl
