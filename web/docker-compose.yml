@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  palet-web:
+    build: .
+    container_name: palet-web
+    ports:
+      - "8007:8007"
+    environment:
+      - NODE_ENV=production
+      - PORT=8007
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8007/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

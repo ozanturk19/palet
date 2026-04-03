@@ -21,11 +21,11 @@
 
 ### 1.2 Marka Değer Önerisi (Value Proposition)
 
-> "PALET; renklerin, dokuların ve özgün tasarımın bir arada yaşadığı ayakkabı deneyimi."
+> "PALET; premium süet dokusunu, editorial tasarım anlayışıyla buluşturan erkek ayakkabı galerisi."
 
-- **Ne satıyor:** Özgün tasarım ayakkabı
-- **Kime satıyor:** 22–38 yaş, şehirli, estetik bilincine sahip, moda takipçisi
-- **Neden farklı:** Seri üretimden değil; sınırlı koleksiyonlar, net bir estetik dil, güçlü dijital marka kimliği
+- **Ne satıyor:** Premium süet erkek ayakkabısı (Chelsea Boot, Loafer, Derby) — sınırlı koleksiyonlar
+- **Kime satıyor:** **Birincil:** 25–40 yaş erkek, şehirli, stil bilinci yüksek, kaliteye yatırım yapan | **İkincil:** 22–35 yaş kadın (erkek için hediye alan)
+- **Neden farklı:** Erkek segmentinde editorial/butik yaklaşımın boşluğunu doldurur; ne kitlesel ne de ulaşılamaz — "erişilebilir lüks"
 
 ### 1.3 Marka Sesi & Estetik
 
@@ -44,27 +44,42 @@
 - D2C markaların büyüme hızı marketplace'lere kıyasla **2.3x** daha yüksek (2023–2025 verisi).
 - Genç tüketicilerin **%67'si** Instagram veya TikTok üzerinden marka keşfediyor.
 
-### 2.2 Rakip Konumlandırması
+### 2.2 Erkek Süet Ayakkabı Pazar Fırsatı
+
+**Neden erkek segmenti öncelikli?**
+- Türkiye'de erkek premium ayakkabı pazarında **D2C / editorial butik boşluğu** mevcut
+- Erkek tüketici, marka sadakatine daha yatkın (tekrar satın alma oranı kadına göre %40 daha yüksek)
+- Ortalama erkek sepet değeri kadına göre **%25–35 daha yüksek** (stil danışmanlığı ihtiyacı az, karar anında satın alır)
+- Süet erkek ayakkabıda (Chelsea Boot, Loafer, Derby) rakip yoğunluğu kitlesel markalarda, premium D2C'de düşük
+
+### 2.3 Rakip Konumlandırması
 
 | Rakip Tipi | Örnek | Güçlü Yönleri | Zayıf Yönleri |
 |---|---|---|---|
-| Büyük Türk Markaları | Aldo TR, Zara Shoes | Bilinirlik, dağıtım | Kişisel olmayan, seri |
-| Marketplace Satıcıları | Trendyol mağazaları | Erişim, fiyat | Marka kimliği yok |
-| Indie D2C Markalar | (rakip) | Estetik | Küçük hacim, güven sorunu |
-| **PALET** | — | Güçlü kimlik + D2C + dijital | Yeni, bilinirlik sıfır |
+| Büyük Türk Markaları | Aldo TR, Zara | Bilinirlik, dağıtım | Kişisel olmayan, seri; erkek ürün çeşitliliği az |
+| Yabancı Premium | Thursday Boots, Beckett Simonon | Kalite algısı | Türkiye'de ulaşım/kargo sorunu |
+| Marketplace Satıcıları | Trendyol erkek bot | Erişim, fiyat | Marka kimliği yok, görsel kalite düşük |
+| **PALET** | — | Güçlü editorial kimlik, D2C, süet uzmanlığı | Yeni, bilinirlik sıfır |
 
-### 2.3 Hedef Kitle Segmentleri
+### 2.4 Hedef Kitle Segmentleri
 
-**Segment A — Ana Hedef:**
-- Yaş: 24–35, kadın ağırlıklı
-- Gelir: Orta-üst (aylık 25.000+ TL net)
-- Dijital davranış: Instagram aktif, story alışverişi yapar, influencer etkisine açık
-- Satın alma motifi: "Benim tarzım" ve "sınırlı sayıda" duygusu
+**Segment A — Ana Hedef (Erkek):**
+- Yaş: 25–40, erkek
+- Gelir: Orta-üst (aylık 30.000+ TL net)
+- Profil: Şehirli profesyonel, mimardan pazarlamacıya — işte iyi giyinmek ister, ama markalı logolar değil, *kalite ve tasarım* arar
+- Dijital davranış: Instagram (keşfet odaklı), LinkedIn, az ama derin araştırma yapar
+- Satın alma motifi: "Yıllarca kullanacağım kaliteli bir şey" ve "süet Chelsea bot bulundurmalıyım"
+- Beden aralığı: 40–45 (öncelikli stok)
 
-**Segment B — İkincil Hedef:**
-- Yaş: 18–24, öğrenci/genç profesyonel
-- Gelir: Orta (taksitli alışveriş)
-- Dijital davranış: TikTok, sınırlı ürün ilgisi
+**Segment B — İkincil Hedef (Hediye Alıcısı):**
+- Yaş: 25–38, kadın, erkek için alışveriş yapan
+- Dijital davranış: Instagram hikaye alışverişi, "erkek doğum günü hediyesi" araması
+- Satın alma motifi: "Özel bir şey, güzel paketlenmiş"
+
+**Segment C — Büyüme (Genç Erkek):**
+- Yaş: 20–26, stil bilinci gelişen genç
+- Dijital: TikTok "outfit" içerikleri, "erkek stil" arama
+- Bütçe: Taksitli alışveriş toleransı yüksek
 
 ---
 
@@ -72,23 +87,34 @@
 
 ### 3.1 Koleksiyon Yapısı
 
-- **Launch Koleksiyonu:** 4–6 model, maksimum 3 renk varyantı per model
-- **Koleksiyon Boyutu:** Her modelden 30–60 adet (sınırlı sayı algısı)
-- **Yenileme:** 3 ayda bir yeni koleksiyon (Sezonluk ritim)
+**Launch Koleksiyonu — "Heritage 01"** (Tasarım dosyalarıyla uyumlu):
+| Model | Kategorisi | Renk Varyantları | Adet/Renk |
+|---|---|---|---|
+| Elysian Chelsea | Chelsea Boot | Tobacco Brown, Ebony | 25–30 |
+| Arc Loafer | Penny Loafer | Sand Drift, Toasted Pecan | 25–30 |
+| Mesa Derby / City Derby | Oxford Derby | Burnt Ochre, Apricot, Chocolate | 20–25 |
+
+- **Toplam launch SKU:** 6–8 model (3 siluet × 2–3 renk)
+- **Koleksiyon boyutu:** Her SKU'dan 20–30 adet (sınırlı sayı algısı)
+- **Beden aralığı:** Erkek 40–45 (önce 41–43 ağırlıklı stok)
+- **Yenileme ritmi:** 3 ayda bir yeni "chapter" koleksiyonu
 
 ### 3.2 Fiyat Pozisyonlaması
 
-| Segment | Fiyat Aralığı | Hedef Marj |
+| Model | Fiyat Aralığı | Hedef Marj |
 |---|---|---|
-| Giriş (Sneaker/Flat) | 1.200 – 1.800 TL | %55–60 |
-| Orta (Tasarım Bot/Topuklu) | 1.800 – 2.800 TL | %60–65 |
-| Premium (Özel Koleksiyon) | 2.800 – 4.500 TL | %65–70 |
+| Derby / Loafer (giriş) | 1.800 – 2.400 TL | %58–62 |
+| Chelsea Boot (orta) | 2.400 – 3.200 TL | %62–66 |
+| Premium / Special Edition | 3.200 – 4.800 TL | %65–70 |
+
+*Not: Erkek süet premium segmentinde Türkiye piyasasında 2.000–3.500 TL bant en az dirençli fiyat noktası.*
 
 ### 3.3 SKU & Stok Yönetimi
 
-- Launch'ta max **6 SKU** (az ama iyi)
-- Stok sinyali: Her üründe "Stokta X adet kaldı" gösterimi (FOMO)
-- Pre-order modeli 2. koleksiyondan itibaren değerlendirilebilir
+- Launch'ta max **6–8 SKU** (az ama yüksek kaliteli fotoğraf + editorial içerik)
+- Stok sinyali: Her üründe "X çift kaldı" gösterimi (FOMO, erkek alıcılarda güçlü etki)
+- Beden stoğu: 41–43 numara %60, 40/44/45 %40
+- Pre-order modeli 2. koleksiyondan itibaren
 
 ---
 
@@ -120,12 +146,22 @@ Faz 3 (12+ ay):   Etsy veya kendi Avrupa kargo altyapısı (export)
 - Kolay iade süreci (güven inşası)
 - Iyzico veya Stripe ödeme entegrasyonu
 
-### 4.3 Instagram Stratejisi
+### 4.3 Sosyal Medya Stratejisi (Erkek Odaklı)
 
+**Instagram:**
 - Günde 1 post + 3–5 story
-- Her Salı & Perşembe Reels (algoritma avantajı)
-- Launch öncesi 30 gün "teaser" kampanyası (ürün göstermeden marka kişiliği kur)
-- Micro-influencer işbirlikleri: 10K–100K takipçi, niche moda hesapları
+- Her Salı & Perşembe Reels
+- İçerik mix'i: %40 ürün (stil çekimi), %30 craft/malzeme (süet tekstürü, yapım), %30 lifestyle (şehirli erkek rutini)
+- Erkek hedef kitleye ulaşmak için: outfit içerikleri, "ne giysem" formatları
+
+**Erkek moda influencer işbirlikleri (öncelikli):**
+- Türkiye'de 10K–150K takipçili erkek moda / yaşam tarzı hesapları
+- "Stil danışmanlığı" + "wardrobe essentials" içerik formatı
+- Seed: 2–3 çift ücretsiz gönder, içerik üretimini bekle (sözleşme olmadan)
+
+**TikTok (Segment C için):**
+- "Outfit of the day" formatında erkek stil içerikleri
+- "Chelsea boot nasıl giyilir" eğitim içerikleri (SEO avantajı)
 
 ---
 
