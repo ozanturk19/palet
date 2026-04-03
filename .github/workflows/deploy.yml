@@ -57,7 +57,7 @@ jobs:
 
             echo "=== Build ==="
             cd /opt/palet/web
-            docker build --progress=plain -t palet-web:latest . 2>&1
+            docker build -t palet-web:latest .
           '
 
       - name: Deploy container on VPS
