@@ -87,22 +87,36 @@ jobs:
 
       - name: Diagnostics
         run: |
-          ssh root@135.181.206.109 '
-            echo "=== Docker PS ==="
-            docker ps -a
+          ssh root@135.181.206.109 'bash -s' << '"DIAG"'
+            {
+              echo "=== Docker PS ==="
+              docker ps -a
+              echo ""
+              echo "=== Container Logs (son 20) ==="
+              docker logs palet-web --tail 20 2>&1 || echo "log yok"
+              echo ""
+              echo "=== Port 8007 ==="
+              ss -tlnp | grep 8007 || echo "HATA: 8007 dinlenmiyor!"
+              echo ""
+              echo "=== Localhost Curl ==="
+              curl -s -o /dev/null -w "HTTP Status: %{http_code}\n" http://localhost:8007 || echo "HATA: localhost curl başarısız"
+              echo ""
+              echo "=== UFW ==="
+              ufw status 2>/dev/null || echo "ufw yok"
+              echo ""
+              echo "=== iptables INPUT ==="
+              iptables -L INPUT -n --line-numbers 2>/dev/null | head -20
+            } > /tmp/palet_diag.txt 2>&1
+            cat /tmp/palet_diag.txt
+          DIAG
 
-            echo "=== Container Logs ==="
-            docker logs palet-web --tail 30 2>&1 || echo "log yok"
-
-            echo "=== Port Dinleme ==="
-            ss -tlnp | grep 8007 || echo "8007 dinlenmiyor!"
-
-            echo "=== Localhost Curl ==="
-            curl -sv http://localhost:8007 2>&1 | tail -20
-
-            echo "=== UFW Status ==="
-            ufw status 2>/dev/null || echo "ufw yok"
-
-            echo "=== iptables 8007 ==="
-            iptables -L INPUT -n | grep 8007 || echo "iptables kuralı yok"
-          '
+      - name: Save diagnostics to repo
+        run: |
+          mkdir -p /tmp/diag
+          ssh root@135.181.206.109 'cat /tmp/palet_diag.txt' > /tmp/diag/output.txt
+          cp /tmp/diag/output.txt diagnostics.txt
+          git config user.email "deploy@palet.app"
+          git config user.name "PALET Deploy Bot"
+          git add diagnostics.txt
+          git diff --staged --quiet || git commit -m "chore: diagnostics output [skip ci]"
+          git push origin HEAD:claude/brand-web-design-uWMjl
