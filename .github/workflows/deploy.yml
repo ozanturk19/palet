@@ -92,3 +92,36 @@ jobs:
             echo "=== localhost curl ==="
             curl -s -o /dev/null -w "HTTP %{http_code}\n" http://localhost:8007 || echo "curl başarısız"
           ENDSSH
+
+      - name: Save diagnostics to repo
+        run: |
+          ssh root@135.181.206.109 << 'ENDSSH' > diagnostics.txt 2>&1
+            echo "=== docker ps -a ==="
+            docker ps -a
+
+            echo ""
+            echo "=== palet-web logs ==="
+            docker logs palet-web --tail 40 2>&1 || echo "log yok"
+
+            echo ""
+            echo "=== ss port 8007 ==="
+            ss -tlnp | grep 8007 || echo "8007 YOK"
+
+            echo ""
+            echo "=== localhost curl verbose ==="
+            curl -sv http://localhost:8007 2>&1 | tail -30
+
+            echo ""
+            echo "=== ufw status ==="
+            ufw status verbose 2>/dev/null || echo "ufw yok"
+
+            echo ""
+            echo "=== iptables ==="
+            iptables -L INPUT -n --line-numbers 2>/dev/null | head -30
+          ENDSSH
+
+          git config user.email "deploy@palet.app"
+          git config user.name "PALET Deploy Bot"
+          git add diagnostics.txt
+          git diff --staged --quiet || git commit -m "chore: diagnostics [skip ci]"
+          git push origin main
