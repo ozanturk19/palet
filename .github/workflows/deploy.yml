@@ -15,6 +15,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build Next.js
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+          echo "Build tamamlandı"
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -22,68 +36,85 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 135.181.206.109 >> ~/.ssh/known_hosts
 
-      - name: Install Docker on VPS (if not exists)
+      - name: Install Node.js & PM2 on VPS (if not exists)
         run: |
           ssh root@135.181.206.109 '
-            if ! command -v docker &> /dev/null; then
-              apt-get update -qq
-              apt-get install -y -qq docker.io git
-              systemctl enable docker && systemctl start docker
-              echo "Docker kuruldu"
+            # Node.js 20
+            if ! node --version 2>/dev/null | grep -q "v20"; then
+              curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+              apt-get install -y nodejs
+              echo "Node.js kuruldu: $(node --version)"
             else
-              echo "Docker mevcut: $(docker --version)"
+              echo "Node.js mevcut: $(node --version)"
             fi
-          '
 
-      - name: Pull latest code on VPS
-        run: |
-          ssh root@135.181.206.109 '
-            if [ -d /opt/palet ]; then
-              cd /opt/palet && git fetch origin && git checkout main && git pull origin main
+            # PM2
+            if ! command -v pm2 &> /dev/null; then
+              npm install -g pm2
+              echo "PM2 kuruldu"
             else
-              git clone -b main https://github.com/ozanturk19/palet.git /opt/palet
+              echo "PM2 mevcut: $(pm2 --version)"
             fi
+
+            # Uygulama dizini
+            mkdir -p /opt/palet-app
           '
 
-      - name: Build Docker image on VPS
+      - name: Copy build to VPS
+        run: |
+          # Standalone çıktısını VPS'e kopyala
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
+            web/.next/standalone/ \
+            root@135.181.206.109:/opt/palet-app/
+
+          # Static dosyaları kopyala
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
+            web/.next/static/ \
+            root@135.181.206.109:/opt/palet-app/.next/static/
+
+          # Public klasörü (varsa)
+          if [ -d web/public ]; then
+            rsync -az --delete \
+              -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
+              web/public/ \
+              root@135.181.206.109:/opt/palet-app/public/
+          fi
+
+          echo "Dosyalar kopyalandı"
+
+      - name: Start / Restart app with PM2
         run: |
           ssh root@135.181.206.109 '
-            echo "=== Disk & Bellek ==="
-            df -h / && free -h
+            cd /opt/palet-app
 
-            echo "=== Docker temizlik ==="
-            docker container prune -f
-            docker image prune -f
-
-            echo "=== Build ==="
-            cd /opt/palet/web
-            docker build -t palet-web:latest .
-          '
-
-      - name: Deploy container on VPS
-        run: |
-          ssh root@135.181.206.109 << 'ENDSSH'
+            # Firewall
             ufw allow 8007/tcp 2>/dev/null || true
-            ufw reload 2>/dev/null || true
-            iptables -C INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || \
-              iptables -I INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || true
 
-            docker stop palet-web 2>/dev/null || true
-            docker rm   palet-web 2>/dev/null || true
-            docker run -d \
-              --name palet-web \
-              --restart unless-stopped \
-              -e PORT=8007 \
-              -e HOSTNAME=0.0.0.0 \
-              -p 0.0.0.0:8007:8007 \
-              palet-web:latest
+            # PM2 ile başlat veya yeniden başlat
+            export PORT=8007
+            export HOSTNAME=0.0.0.0
 
-            sleep 10
-            docker ps | grep palet-web || (echo "HATA: container çalışmıyor"; docker logs palet-web; exit 1)
+            if pm2 describe palet-web > /dev/null 2>&1; then
+              pm2 restart palet-web
+            else
+              PORT=8007 HOSTNAME=0.0.0.0 pm2 start server.js \
+                --name palet-web \
+                --env production \
+                -- --port 8007
+            fi
+
+            pm2 save
+            pm2 startup 2>/dev/null || true
+
+            sleep 5
+            pm2 status palet-web
+
             STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8007)
             echo "Localhost HTTP: $STATUS"
-            [ "$STATUS" = "200" ] || (echo "HATA: localhost $STATUS"; docker logs palet-web --tail 20; exit 1)
-          ENDSSH
+            [ "$STATUS" = "200" ] || (echo "HATA: site $STATUS döndü"; pm2 logs palet-web --lines 20 --nostream; exit 1)
+          '
 
       - name: External health check
         run: |
@@ -92,6 +123,6 @@ jobs:
           if [ "$STATUS" = "200" ]; then
             echo "✅ http://135.181.206.109:8007 — CANLI"
           else
-            echo "❌ Dış erişim yok ($STATUS) — Hetzner cloud firewall'da port 8007 açılmalı"
+            echo "❌ Dış erişim yok ($STATUS)"
             exit 1
           fi
