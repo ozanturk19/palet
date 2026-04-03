@@ -22,7 +22,7 @@ export default function Navbar() {
             href="/"
             className="text-3xl font-bold tracking-tighter text-primary font-headline"
           >
-            PALET
+            PALLET
           </Link>
           <div className="hidden md:flex gap-8 items-center">
             {links.map((link) => (

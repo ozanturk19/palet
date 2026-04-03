@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PALET | The Suede Gallery",
+  title: "PALLET | The Suede Gallery",
   description:
     "Premium erkek süet ayakkabı. Chelsea Boot, Loafer ve Derby — sınırlı koleksiyonlar, editorial tasarım.",
   openGraph: {
-    title: "PALET | The Suede Gallery",
+    title: "PALLET | The Suede Gallery",
     description: "Premium erkek süet ayakkabı koleksiyonu.",
     type: "website",
   },

@@ -44,7 +44,7 @@ export default function HomePage() {
               <div className="aspect-[4/5] bg-surface-container-low rounded-sm overflow-hidden relative">
                 <Image
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAW-4nnSmbasOV7KLEqjRre5ZUoYmJ3buNJOcwuqb2Bj1Cha8Zi-44WcATmyhnqzgI_RtxqY9xgZOBgut8lz2M_Ak4-2nDTC_0yFNBuG6BpAXAWtepUvrxntcDF-KVWlYdcuVkv0YzU-THUQhGlvXYDS7hm9xot24SB5zwhbVYNPmyr67ysEJ_c44gQ5h405tfyo1xb-FTMGQ_EKJqLDKE4gR-T8nN6Z6cPsEW-3ZSh0ruVUH9_FG7dnbgkHbHvLOFlJFEpG3e84WM"
-                  alt="PALET premium erkek süet ayakkabı"
+                  alt="PALLET premium erkek süet ayakkabı"
                   fill
                   className="object-cover"
                   priority
@@ -169,7 +169,7 @@ export default function HomePage() {
                 </h2>
                 <div className="space-y-6 text-lg text-on-surface-variant leading-relaxed font-body">
                   <p>
-                    PALET, tek bir obsesyon üzerine kuruldu: süedin dokunsal dürüstlüğü.
+                    PALLET, tek bir obsesyon üzerine kuruldu: süedin dokunsal dürüstlüğü.
                     Ayakkabının ikinci bir deri gibi hissettirmesi gerektiğine inanıyoruz.
                   </p>
                   <p>

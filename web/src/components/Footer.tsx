@@ -9,7 +9,7 @@ export default function Footer() {
             href="/"
             className="text-xl font-bold text-primary font-headline tracking-tighter block"
           >
-            PALET
+            PALLET
           </Link>
           <p className="text-sm text-[#5d4037] leading-relaxed max-w-xs font-body">
             Premium erkek süet ayakkabı galerisi. Sınırlı koleksiyonlar,
@@ -96,7 +96,7 @@ export default function Footer() {
 
       <div className="px-6 md:px-12 py-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 max-w-[1920px] mx-auto">
         <p className="font-label text-xs uppercase tracking-widest text-[#5d4037] opacity-60">
-          © 2026 PALET. The Suede Gallery. Tüm hakları saklıdır.
+          © 2026 PALLET. The Suede Gallery. Tüm hakları saklıdır.
         </p>
         <div className="flex gap-6">
           <span className="material-symbols-outlined text-primary opacity-60">

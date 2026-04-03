@@ -193,7 +193,7 @@ export default function SepetPage() {
                     Karbon Nötr Kargo
                   </h4>
                   <p className="text-sm text-on-surface-variant mt-2 font-body leading-relaxed">
-                    Her PALET siparişi, Kuzey Avrupa&apos;daki ağaçlandırma projeleriyle
+                    Her PALLET siparişi, Kuzey Avrupa&apos;daki ağaçlandırma projeleriyle
                     dengelenir.
                   </p>
                 </div>
