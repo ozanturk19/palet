@@ -59,27 +59,36 @@ jobs:
 
       - name: Deploy container on VPS
         run: |
-          ssh root@135.181.206.109 '
-            # Firewall: port 8007 aç
-            ufw allow 8007/tcp comment "Palet Web" 2>/dev/null || true
+          ssh root@135.181.206.109 << 'ENDSSH'
+            # Firewall
+            ufw allow 8007/tcp 2>/dev/null || true
             ufw reload 2>/dev/null || true
             iptables -C INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || \
               iptables -I INPUT -p tcp --dport 8007 -j ACCEPT 2>/dev/null || true
 
             # Container yeniden başlat
             docker stop palet-web 2>/dev/null || true
-            docker rm palet-web 2>/dev/null || true
+            docker rm   palet-web 2>/dev/null || true
             docker run -d \
               --name palet-web \
               --restart unless-stopped \
+              -e PORT=8007 \
+              -e HOSTNAME=0.0.0.0 \
               -p 0.0.0.0:8007:8007 \
               palet-web:latest
 
-            # Bekle ve doğrula
-            sleep 8
-            docker ps | grep palet-web
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8007)
-            echo "Localhost HTTP Status: $STATUS"
-            [ "$STATUS" = "200" ] && echo "✅ Site canlıda → http://135.181.206.109:8007" || echo "⚠️ HTTP $STATUS — logları kontrol et"
-            docker logs palet-web --tail 10 2>&1
-          '
+            sleep 10
+
+            # Durum raporu — başarısız olsa bile devam et
+            echo "=== docker ps ==="
+            docker ps -a | grep palet || echo "container bulunamadı"
+
+            echo "=== container logs ==="
+            docker logs palet-web --tail 30 2>&1 || true
+
+            echo "=== port ==="
+            ss -tlnp | grep 8007 || echo "8007 dinlenmiyor"
+
+            echo "=== localhost curl ==="
+            curl -s -o /dev/null -w "HTTP %{http_code}\n" http://localhost:8007 || echo "curl başarısız"
+          ENDSSH
