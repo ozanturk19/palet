@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PALLET Leather — Logo Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400&family=Playfair+Display:wght@400;700&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  background: #f0ece6;
+  padding: 60px 40px;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.section {
+  margin-bottom: 72px;
+}
+
+.section-title {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 48px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ── Card grid ─────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;   /* ← prevents logo-wrap from stretching to card width */
+  justify-content: center;
+  padding: 64px 48px;
+}
+
+.card.light { background: #faf9f7; }
+.card.dark  { background: #1a1c1a; }
+.card.cream { background: #f5f0e8; }
+.card.stone { background: #2c2c2a; }
+
+/* ── Logo wrapper ────────────────────────────────────────
+   width: max-content is the critical fix — it constrains
+   the wrapper to exactly the wordmark's rendered width.
+   Without it, the wrapper stretches to fill the flex card
+   and the LEATHER line overflows.
+   ─────────────────────────────────────────────────────── */
+.logo-wrap {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  align-items: stretch;
+}
+
+/* ── Wordmark row ───────────────────────────────────────── */
+.wordmark {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Text letters: PALL + T */
+.wordmark-text {
+  font-size: 52px;
+  font-weight: 700;
+  color: #1a1c1a;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.card.dark  .wordmark-text,
+.card.stone .wordmark-text { color: #f5f0e8; }
+
+/* The E — inline SVG sized to match cap-height */
+.letter-e {
+  display: inline-block;
+  width: 0.73em;    /* proportional to font-size */
+  height: 0.73em;
+  vertical-align: text-bottom;
+  flex-shrink: 0;
+}
+
+/* ── LEATHER subtitle ───────────────────────────────────── */
+.leather-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 8px;
+  width: 100%;    /* fills logo-wrap which is already max-content wide */
+}
+
+.leather-row hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #8b4f2d;
+  opacity: 0.5;
+}
+
+.leather-text {
+  font-size: 9px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #8b4f2d;
+  padding: 0 8px;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+/* ── Font variants ──────────────────────────────────────── */
+.f-cinzel       .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 2px; font-size: 46px; }
+.f-cinzel       .leather-text  { font-family: 'Cinzel', serif; font-weight: 400; }
+
+.f-cormorant    .wordmark-text { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: 0px; font-size: 58px; }
+.f-cormorant    .leather-text  { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 8px; }
+
+.f-playfair     .wordmark-text { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: -1px; font-size: 52px; }
+.f-playfair     .leather-text  { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: 5px; }
+
+.f-raleway      .wordmark-text { font-family: 'Raleway', sans-serif; font-weight: 200; letter-spacing: 8px; font-size: 44px; }
+.f-raleway      .leather-text  { font-family: 'Raleway', sans-serif; font-weight: 300; letter-spacing: 8px; }
+
+/* ── Label ──────────────────────────────────────────────── */
+.card-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-top: 20px;
+  text-align: center;
+}
+.card.dark  .card-label,
+.card.stone .card-label { color: #555; }
+
+/* Wrapper for logo + label */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
+</head>
+<body>
+
+<h2>PALLET Leather — Logo Alternatifleri</h2>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VARIANT 1 — Cinzel (antique roman, prestige)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">01 — Cinzel · Antique Roman</p>
+  <div class="grid">
+
+    <div class="card light f-cinzel">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#8b4f2d"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Açık zemin</span>
+      </div>
+    </div>
+
+    <div class="card dark f-cinzel">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#c47a45"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Koyu zemin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VARIANT 2 — Cormorant Garamond (editorial luxury)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">02 — Cormorant Garamond · Editorial Luxury</p>
+  <div class="grid">
+
+    <div class="card cream f-cormorant">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#8b4f2d"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Krem zemin</span>
+      </div>
+    </div>
+
+    <div class="card stone f-cormorant">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#c47a45"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Taş zemin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VARIANT 3 — Playfair Display (bold editorial)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">03 — Playfair Display · Bold Editorial</p>
+  <div class="grid">
+
+    <div class="card light f-playfair">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#8b4f2d"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Açık zemin</span>
+      </div>
+    </div>
+
+    <div class="card dark f-playfair">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#c47a45"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Koyu zemin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VARIANT 4 — Raleway (geometric minimalist)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">04 — Raleway · Geometric Minimal</p>
+  <div class="grid">
+
+    <div class="card cream f-raleway">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#8b4f2d"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Krem zemin</span>
+      </div>
+    </div>
+
+    <div class="card stone f-raleway">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALL</span>
+            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
+              <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
+              <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
+              <polygon points="14,64 70,64 82,76 70,88 14,88" fill="#c47a45"/>
+            </svg>
+            <span class="wordmark-text">T</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Taş zemin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
