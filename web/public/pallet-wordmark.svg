@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100">
+  <!-- PALLET Leather — Wordmark -->
+  <!-- All letters geometric sans, E in brand color with pallet plank treatment -->
+
+  <!-- ═══ P (x=20) ═══ -->
+  <rect x="20" y="10" width="9"  height="60" fill="#1a1c1a"/>
+  <rect x="20" y="10" width="34" height="9"  fill="#1a1c1a"/>
+  <rect x="45" y="10" width="9"  height="30" fill="#1a1c1a"/>
+  <rect x="20" y="31" width="34" height="9"  fill="#1a1c1a"/>
+
+  <!-- ═══ A (x=63) ═══ -->
+  <line x1="63" y1="70" x2="83" y2="10" stroke="#1a1c1a" stroke-width="9" stroke-linecap="square"/>
+  <line x1="103" y1="70" x2="83" y2="10" stroke="#1a1c1a" stroke-width="9" stroke-linecap="square"/>
+  <rect x="72" y="38" width="22" height="8" fill="#1a1c1a"/>
+
+  <!-- ═══ L (x=113) ═══ -->
+  <rect x="113" y="10" width="9"  height="60" fill="#1a1c1a"/>
+  <rect x="113" y="61" width="34" height="9"  fill="#1a1c1a"/>
+
+  <!-- ═══ L (x=157) ═══ -->
+  <rect x="157" y="10" width="9"  height="60" fill="#1a1c1a"/>
+  <rect x="157" y="61" width="34" height="9"  fill="#1a1c1a"/>
+
+  <!-- ═══ E (x=201) — Pallet Plank E in brand color ═══ -->
+  <!-- Vertical stringer -->
+  <rect x="201" y="10" width="9" height="60" fill="#8b4f2d"/>
+  <!-- Top plank: y=10–22, midpoint y=16 -->
+  <polygon points="201,10 253,10 263,16 253,22 201,22" fill="#8b4f2d"/>
+  <!-- Middle plank: y=34–46, midpoint y=40 -->
+  <polygon points="210,34 243,34 251,40 243,46 210,46" fill="#8b4f2d"/>
+  <!-- Bottom plank: y=58–70, midpoint y=64 -->
+  <polygon points="201,58 253,58 263,64 253,70 201,70" fill="#8b4f2d"/>
+
+  <!-- ═══ T (x=273) ═══ -->
+  <rect x="273" y="10" width="40" height="9"  fill="#1a1c1a"/>
+  <rect x="288" y="10" width="9"  height="60" fill="#1a1c1a"/>
+
+  <!-- ═══ LEATHER subtitle ═══ -->
+  <text
+    x="20" y="95"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-weight="300"
+    font-size="11"
+    letter-spacing="9"
+    fill="#8b4f2d"
+  >LEATHER</text>
+</svg>
