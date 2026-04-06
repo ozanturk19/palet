@@ -92,13 +92,17 @@ h2 {
 .card.dark  .wordmark-text,
 .card.stone .wordmark-text { color: #f5f0e8; }
 
-/* The E — inline SVG sized to match cap-height */
+/* The E — inline SVG sized to match cap-height.
+   viewBox is tight-cropped (14 12 70 76) so the E fills the box.
+   height:0.72em + vertical-align:baseline → bottom on baseline,
+   top at cap-height, exact match with surrounding capitals. */
 .letter-e {
   display: inline-block;
-  width: 0.73em;    /* proportional to font-size */
-  height: 0.73em;
-  vertical-align: text-bottom;
+  height: 0.72em;
+  width: auto;
+  vertical-align: baseline;
   flex-shrink: 0;
+  margin-bottom: 0.02em; /* micro-nudge for optical baseline */
 }
 
 /* ── LEATHER subtitle ───────────────────────────────────── */
@@ -128,7 +132,7 @@ h2 {
 }
 
 /* ── Font variants ──────────────────────────────────────── */
-.f-cinzel       .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 2px; font-size: 46px; }
+.f-cinzel       .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 2px; font-size: 52px; }
 .f-cinzel       .leather-text  { font-family: 'Cinzel', serif; font-weight: 400; }
 
 .f-cormorant    .wordmark-text { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: 0px; font-size: 58px; }
@@ -177,7 +181,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
@@ -198,7 +202,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
@@ -229,7 +233,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
@@ -250,7 +254,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
@@ -281,7 +285,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
@@ -302,7 +306,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
@@ -333,7 +337,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#8b4f2d"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#8b4f2d"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#8b4f2d"/>
@@ -354,7 +358,7 @@ h2 {
         <div class="logo-wrap">
           <div class="wordmark">
             <span class="wordmark-text">PALL</span>
-            <svg class="letter-e" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg class="letter-e" viewBox="14 12 70 76" xmlns="http://www.w3.org/2000/svg">
               <rect x="14" y="12" width="12" height="76" fill="#c47a45"/>
               <polygon points="14,12 70,12 82,24 70,36 14,36" fill="#c47a45"/>
               <polygon points="26,44 62,44 72,54 62,64 26,64" fill="#c47a45"/>
