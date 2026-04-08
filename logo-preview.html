@@ -82,7 +82,6 @@ h2 {
 
 /* Text letters: PALL + T */
 .wordmark-text {
-  font-size: 52px;
   font-weight: 700;
   color: #1a1c1a;
   letter-spacing: -1px;
@@ -131,18 +130,25 @@ h2 {
   font-weight: 400;
 }
 
-/* ── Font variants ──────────────────────────────────────── */
-.f-cinzel       .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 2px; font-size: 52px; }
-.f-cinzel       .leather-text  { font-family: 'Cinzel', serif; font-weight: 400; }
+/* ── Font variants ──────────────────────────────────────────
+   font-size is on .wordmark (not .wordmark-text) so that
+   .letter-e SVG also inherits the correct em size.
+   ─────────────────────────────────────────────────────────── */
+.f-cinzel    .wordmark { font-size: 52px; }
+.f-cinzel    .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 2px; }
+.f-cinzel    .leather-text  { font-family: 'Cinzel', serif; font-weight: 400; }
 
-.f-cormorant    .wordmark-text { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: 0px; font-size: 58px; }
-.f-cormorant    .leather-text  { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 8px; }
+.f-cormorant .wordmark { font-size: 58px; }
+.f-cormorant .wordmark-text { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: 0px; }
+.f-cormorant .leather-text  { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 8px; }
 
-.f-playfair     .wordmark-text { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: -1px; font-size: 52px; }
-.f-playfair     .leather-text  { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: 5px; }
+.f-playfair  .wordmark { font-size: 52px; }
+.f-playfair  .wordmark-text { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: -1px; }
+.f-playfair  .leather-text  { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: 5px; }
 
-.f-raleway      .wordmark-text { font-family: 'Raleway', sans-serif; font-weight: 200; letter-spacing: 8px; font-size: 44px; }
-.f-raleway      .leather-text  { font-family: 'Raleway', sans-serif; font-weight: 300; letter-spacing: 8px; }
+.f-raleway   .wordmark { font-size: 44px; }
+.f-raleway   .wordmark-text { font-family: 'Raleway', sans-serif; font-weight: 200; letter-spacing: 8px; }
+.f-raleway   .leather-text  { font-family: 'Raleway', sans-serif; font-weight: 300; letter-spacing: 8px; }
 
 /* ── Label ──────────────────────────────────────────────── */
 .card-label {
