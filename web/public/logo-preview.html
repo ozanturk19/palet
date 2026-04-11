@@ -64,7 +64,7 @@ body {
 /* ── Wordmark ───────────────────────────────────────────── */
 .wordmark {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   line-height: 1;
   white-space: nowrap;
 }
@@ -77,11 +77,9 @@ body {
 .card.bg-dark .wordmark-text { color: #f1ebe0; }
 
 /* ── E letterform ───────────────────────────────────────── */
-/* align-items: baseline on parent puts SVG bottom on text baseline.
-   height: 0.72em (= cap-height) → top of SVG aligns with cap top. */
 .letter-e {
   display: block;
-  height: 0.72em;
+  height: 0.75em;
   width: auto;
   flex-shrink: 0;
 }
