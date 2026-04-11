@@ -77,13 +77,13 @@ body {
 .card.bg-dark .wordmark-text { color: #f1ebe0; }
 
 /* ── E letterform ───────────────────────────────────────── */
+/* align-items: baseline on parent puts SVG bottom on text baseline.
+   height: 0.72em (= cap-height) → top of SVG aligns with cap top. */
 .letter-e {
-  display: inline-block;
+  display: block;
   height: 0.72em;
   width: auto;
   flex-shrink: 0;
-  align-self: flex-end;
-  margin-bottom: 0.04em;
 }
 
 /* ── LEATHER row ────────────────────────────────────────── */
