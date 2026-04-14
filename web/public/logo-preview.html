@@ -30,7 +30,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* ── 2-column grid ──────────────────────────────────────── */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -53,7 +52,6 @@ body {
   align-items: stretch;
 }
 
-/* ── Wordmark ───────────────────────────────────────────── */
 .wordmark {
   display: flex;
   align-items: center;
@@ -66,10 +64,15 @@ body {
   line-height: 1;
 }
 
-/* ── E letterform ───────────────────────────────────────── */
+/*
+  3D E sizing:
+  viewBox "0 0 77 106" — the cap-letter portion is 100 units (y=6..106),
+  the 3D top-face protrudes 6 units above (y=0..6).
+  height: 0.76em makes the cap body ≈ 0.72em (100/106 × 0.76 ≈ 0.717em).
+*/
 .letter-e {
   display: block;
-  height: 0.75em;
+  height: 0.76em;
   width: auto;
   flex-shrink: 0;
 }
@@ -100,32 +103,25 @@ body {
 }
 
 /* ── Font variants ──────────────────────────────────────── */
-
-/* 1 — Cinzel */
 .f1 .wordmark { font-size: 48px; letter-spacing: 4px; }
 .f1 .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; }
 
-/* 2 — Cormorant Garamond */
 .f2 .wordmark { font-size: 58px; letter-spacing: 3px; }
 .f2 .wordmark-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
 
-/* 3 — Playfair Display */
 .f3 .wordmark { font-size: 50px; letter-spacing: 2px; }
 .f3 .wordmark-text { font-family: 'Playfair Display', serif; font-weight: 700; }
 
-/* 4 — Libre Baskerville */
 .f4 .wordmark { font-size: 46px; letter-spacing: 3px; }
 .f4 .wordmark-text { font-family: 'Libre Baskerville', serif; font-weight: 700; }
 
-/* 5 — IM Fell English */
 .f5 .wordmark { font-size: 54px; letter-spacing: 4px; }
 .f5 .wordmark-text { font-family: 'IM Fell English', serif; font-weight: 400; }
 
-/* 6 — Spectral */
 .f6 .wordmark { font-size: 52px; letter-spacing: 6px; }
 .f6 .wordmark-text { font-family: 'Spectral', serif; font-weight: 300; }
 
-/* ── Card label ─────────────────────────────────────────── */
+/* ── Labels ─────────────────────────────────────────────── */
 .card-inner {
   display: flex;
   flex-direction: column;
@@ -144,14 +140,25 @@ body {
   color: #999;
   letter-spacing: 3px;
   font-size: 9px;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 </style>
 </head>
 <body>
 
 <p class="page-title">PALLET Leather — Font Alternatifleri</p>
-<p class="page-sub">Variant 01 · Krem zemin · 6 yazı tipi</p>
+<p class="page-sub">3D Palet E · Krem zemin · 6 yazı tipi</p>
+
+<!--
+  3D E SVG coordinates (all y values shifted +6 so top-face fits inside viewBox):
+  ViewBox: 0 0 77 106
+  Depth vector: right +9, up +6 units
+
+  Color scheme (light bg):
+    front  #8b4f2d — main face
+    top    #b97344 — top face highlight
+    shadow #522b12 — end cross-section
+-->
 
 <div class="grid">
 
@@ -161,11 +168,23 @@ body {
       <div class="logo-wrap">
         <div class="wordmark">
           <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 68 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,0 48,0 68,8 48,16 0,16" fill="#8b4f2d"/>
-            <polygon points="0,42 38,42 54,50 38,58 0,58" fill="#8b4f2d"/>
-            <polygon points="0,84 48,84 68,92 48,100 0,100" fill="#8b4f2d"/>
+          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
+            <!-- spine -->
+            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
+            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
+            <!-- top arm -->
+            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
+            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
+            <!-- middle arm -->
+            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
+            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
+            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
+            <!-- bottom arm -->
+            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
+            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
+            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
           </svg>
           <span class="wordmark-text">T</span>
         </div>
@@ -181,11 +200,19 @@ body {
       <div class="logo-wrap">
         <div class="wordmark">
           <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 68 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,0 48,0 68,8 48,16 0,16" fill="#8b4f2d"/>
-            <polygon points="0,42 38,42 54,50 38,58 0,58" fill="#8b4f2d"/>
-            <polygon points="0,84 48,84 68,92 48,100 0,100" fill="#8b4f2d"/>
+          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
+            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
+            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
+            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
+            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
+            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
+            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
+            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
+            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
+            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
           </svg>
           <span class="wordmark-text">T</span>
         </div>
@@ -201,11 +228,19 @@ body {
       <div class="logo-wrap">
         <div class="wordmark">
           <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 68 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,0 48,0 68,8 48,16 0,16" fill="#8b4f2d"/>
-            <polygon points="0,42 38,42 54,50 38,58 0,58" fill="#8b4f2d"/>
-            <polygon points="0,84 48,84 68,92 48,100 0,100" fill="#8b4f2d"/>
+          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
+            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
+            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
+            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
+            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
+            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
+            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
+            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
+            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
+            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
           </svg>
           <span class="wordmark-text">T</span>
         </div>
@@ -221,11 +256,19 @@ body {
       <div class="logo-wrap">
         <div class="wordmark">
           <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 68 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,0 48,0 68,8 48,16 0,16" fill="#8b4f2d"/>
-            <polygon points="0,42 38,42 54,50 38,58 0,58" fill="#8b4f2d"/>
-            <polygon points="0,84 48,84 68,92 48,100 0,100" fill="#8b4f2d"/>
+          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
+            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
+            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
+            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
+            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
+            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
+            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
+            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
+            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
+            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
           </svg>
           <span class="wordmark-text">T</span>
         </div>
@@ -241,11 +284,19 @@ body {
       <div class="logo-wrap">
         <div class="wordmark">
           <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 68 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,0 48,0 68,8 48,16 0,16" fill="#8b4f2d"/>
-            <polygon points="0,42 38,42 54,50 38,58 0,58" fill="#8b4f2d"/>
-            <polygon points="0,84 48,84 68,92 48,100 0,100" fill="#8b4f2d"/>
+          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
+            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
+            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
+            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
+            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
+            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
+            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
+            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
+            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
+            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
           </svg>
           <span class="wordmark-text">T</span>
         </div>
@@ -261,11 +312,19 @@ body {
       <div class="logo-wrap">
         <div class="wordmark">
           <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 68 100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,0 48,0 68,8 48,16 0,16" fill="#8b4f2d"/>
-            <polygon points="0,42 38,42 54,50 38,58 0,58" fill="#8b4f2d"/>
-            <polygon points="0,84 48,84 68,92 48,100 0,100" fill="#8b4f2d"/>
+          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
+            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
+            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
+            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
+            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
+            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
+            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
+            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
+            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
+            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
+            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
           </svg>
           <span class="wordmark-text">T</span>
         </div>
