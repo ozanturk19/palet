@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PALLET | The Suede Gallery",
+  title: "PALETKIDS | Çocuk Deri Giyim",
   description:
-    "Premium erkek süet ayakkabı. Chelsea Boot, Loafer ve Derby — sınırlı koleksiyonlar, editorial tasarım.",
+    "Çocuklar için premium deri ceket, yelek ve ayakkabı. Gerçek deri, kalıcı kalite — PALETKIDS.",
   openGraph: {
-    title: "PALLET | The Suede Gallery",
-    description: "Premium erkek süet ayakkabı koleksiyonu.",
+    title: "PALETKIDS | Çocuk Deri Giyim",
+    description: "Çocuklar için premium deri ceket, yelek ve ayakkabı koleksiyonu.",
     type: "website",
   },
 };
@@ -27,7 +27,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Epilogue:wght@300;400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <link

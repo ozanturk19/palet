@@ -5,12 +5,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Monograph — PALLET",
+  title: "Hikayemiz — PALETKIDS",
   description:
-    "PALLET'in kuruluş hikayesi, Tuscan atölyeleri ve süet obsesyonu. Hızlı modanın karşısında kalıcı karakter.",
+    "PALETKIDS'in kuruluş hikayesi — çocuklar için gerçek deri, kalıcı kalite ve neden sentetik değil.",
   openGraph: {
-    title: "The Monograph — PALLET",
-    description: "Süedin dokunsal dürüstlüğü üzerine bir manifesto.",
+    title: "Hikayemiz — PALETKIDS",
+    description: "Çocuklar için gerçek deri obsesyonu üzerine bir manifesto.",
   },
 };
 
@@ -19,55 +19,52 @@ const chapters = [
     number: "01",
     title: "Başlangıç Noktası",
     body: [
-      "PALLET tek bir sorudan doğdu: Neden pazar, erkek için kaliteli ayakkabıyı ya lüks markaların ulaşılmaz fiyatlarıyla ya da hızlı modanın birkaç ay ömürlü ürünleriyle sınırlı tutuyor?",
-      "Cevap basitti — kimse bu arayı doldurmaya çalışmamıştı. Biz o arayı doldurmak için yola çıktık.",
+      "PALETKIDS tek bir sorudan doğdu: Neden çocuk giyim piyasası gerçek deriyi çocuklardan uzak tutuyor? Plastik kaplı sahte deri her yerde, gerçek kalite ise yok.",
+      "Cevap basitti — kimse çocuklar için gerçek deri üzerine odaklanmamıştı. Biz o boşluğu doldurmak için yola çıktık.",
     ],
-    image:
-      "/images/hero-suede.jpg",
-    imageAlt: "Atölye — başlangıç",
+    image: "/images/atelier.jpg",
+    imageAlt: "PALETKIDS atölyesi — başlangıç",
     imagePosition: "right" as const,
   },
   {
     number: "02",
-    title: "Tuscan Seçimi",
+    title: "İtalyan Deri Seçimi",
     body: [
-      "İtalya'nın Toskana bölgesi, yüzyıllar boyunca dünyanın en iyi deri işçiliğine ev sahipliği yaptı. Bizim atölyemiz de bu geleneğin içinde, Floransa'nın güneyinde küçük bir aile işletmesi.",
-      "Her derinin 'nap' kalitesini — yani yüzeyin kadifemsi dokusunu ve yoğunluğunu — gözle ve elle kontrol eden ustalar var burada. Bir rule of thumb var atölyede: 'Tereddüt varsa, geçilir.' Sadece en iyi çeyrek malzeme üretime girer.",
+      "İtalya'nın Toskana bölgesi, yüzyıllar boyunca dünyanın en iyi deri işçiliğine ev sahipliği yaptı. Her parça, tam tahıl deride kalite kontrolden geçiyor.",
+      "Çocuklar için özel yumuşatma işlemi uyguluyoruz — cilt hassasiyetine dikkat, hareket özgürlüğü ön planda. Sertlik değil, doğal esneklik.",
     ],
-    image:
-      "/images/atelier.jpg",
-    imageAlt: "Tuscan atölyesi",
+    image: "/images/hero-kids.jpg",
+    imageAlt: "Deri seçim süreci",
     imagePosition: "left" as const,
   },
   {
     number: "03",
-    title: "Yavaş Süreç",
+    title: "Uzun Ömür Felsefesi",
     body: [
-      "Bir PALLET çifti, kalıba geçmeden önce ortalama 14 saat işçilik gerektirir. Bu süre, büyük markaların bantlı üretimiyle kıyaslandığında neredeyse iki kat fazla.",
-      "Neden? Çünkü süet, hata affetmez. Yanlış bir kesim, fazla bir baskı — deri bunu sonsuza kadar saklar. Yavaş çalışmak bir tercih değil, materyalin zorunluluğu.",
+      "Hızlı moda değil, yavaş üretim. Her PALETKIDS parçası, birden fazla sezon — hatta kardeşten kardeşe geçecek şekilde tasarlanıyor.",
+      "Doğru bakımla gerçek deri yıllar içinde daha güzel bir görünüm kazanır. Bu yatırım, en iyi yatırımdır.",
     ],
-    image:
-      "/images/chelsea-ii.jpg",
-    imageAlt: "El işçiliği",
+    image: "/images/featured-jacket.jpg",
+    imageAlt: "El işçiliği detayı",
     imagePosition: "right" as const,
   },
 ];
 
 const values = [
   {
-    icon: "grain",
-    title: "Malzeme Önce",
-    desc: "Tasarım malzemeye göre şekillenir, tersi değil. Süetin doğal karakterini bastırmayan, onu ön plana çıkaran kesimler.",
+    icon: "child_care",
+    title: "Çocuk Odaklı",
+    desc: "Her tasarım çocukların aktif hayatı düşünülerek yapılır. Hareket özgürlüğü, güvenli aksesuarlar, cilt dostu malzeme.",
   },
   {
     icon: "autorenew",
-    title: "Mevsimlik Düzenleme",
-    desc: "Yılda dört koleksiyon değil, iki sezon. Her sezonda sınırlı sayıda çift. Stok bitmeden yenisi gelmiyor.",
+    title: "Uzun Ömürlü Üretim",
+    desc: "Yılda iki sezon, sınırlı üretim. Stok bitmeden yenisi gelmiyor — çünkü her parça özenle üretilir.",
   },
   {
     icon: "eco",
     title: "Sorumlu Üretim",
-    desc: "Vegetable-tanned deri, su bazlı boyalar, karbon dengeleme programı. Çevresel etki minimum, kalite maksimum.",
+    desc: "Vegetable-tanned deri, su bazlı boyalar. Çocuklarımızın büyüyeceği dünyaya saygı — hem ürünlerde hem üretimde.",
   },
 ];
 
@@ -81,15 +78,15 @@ export default function MonografPage() {
         <section className="py-32 px-6 md:px-12 max-w-[1920px] mx-auto">
           <div className="max-w-3xl">
             <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-              The Monograph — PALLET
+              Hikayemiz — PALETKIDS
             </span>
             <h1 className="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-10">
-              Süedin <br />
-              <span className="text-primary italic">Manifestosu.</span>
+              Gerçek Deri, <br />
+              <span className="text-primary italic">Gerçek Çocuklar.</span>
             </h1>
             <p className="text-xl text-on-surface-variant leading-relaxed font-body max-w-xl">
-              Bu sayfa bir ürün kataloğu değil. Bir obsesyonun kaydı —
-              neden bu malzeme, bu atölye, bu yavaşlık.
+              Bu sayfa bir ürün kataloğu değil. Neden çocuklar için gerçek deri
+              kullanıyoruz — obsesyonun kaydı.
             </p>
           </div>
         </section>
@@ -154,7 +151,7 @@ export default function MonografPage() {
                 Ne Değil, Neden
               </h2>
               <p className="text-on-surface-variant font-body max-w-xl mx-auto">
-                PALLET'i anlatan üç ilke.
+                PALETKIDS&apos;i anlatan üç ilke.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
@@ -182,11 +179,10 @@ export default function MonografPage() {
         <section className="py-40 bg-primary">
           <div className="px-6 md:px-12 max-w-[1920px] mx-auto text-center">
             <blockquote className="font-headline text-4xl md:text-6xl font-extrabold text-on-primary tracking-tighter leading-tight max-w-4xl mx-auto italic">
-              &ldquo;Ayakkabı ikinci bir deri gibi hissettirmeli. Sabahtan akşama
-              unutmalısın onu.&rdquo;
+              &ldquo;Çocuklar büyüklerin küçük versiyonu değil — kendi kalitelerini hak ediyorlar.&rdquo;
             </blockquote>
             <cite className="mt-10 block font-label text-xs uppercase tracking-widest text-on-primary/60 not-italic">
-              — PALLET Kurucu Notu, 2026
+              — PALETKIDS Kurucu Notu, 2026
             </cite>
           </div>
         </section>
@@ -199,7 +195,7 @@ export default function MonografPage() {
                 Koleksiyona Git
               </h2>
               <p className="text-on-surface-variant font-body">
-                Manifesto okundu. Şimdi hisset.
+                Hikaye okundu. Şimdi hisset.
               </p>
             </div>
             <div className="flex gap-6 flex-wrap">

@@ -3,48 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PALLET Leather — Font Alternatifleri</title>
+<title>PALETKIDS — Logo Preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@300;400&family=Playfair+Display:wght@700&family=Libre+Baskerville:wght@700&family=IM+Fell+English&family=Spectral:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400&family=Playfair+Display:wght@400;700&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: #e6e1da;
-  padding: 48px 32px;
   font-family: sans-serif;
+  background: #f0ece6;
+  padding: 60px 40px;
 }
 
-.page-title {
+h2 {
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+.section {
+  margin-bottom: 72px;
+}
+
+.section-title {
   font-size: 10px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #999;
-  margin-bottom: 6px;
-}
-.page-sub {
-  font-size: 9px;
-  letter-spacing: 2px;
-  color: #bbb;
-  margin-bottom: 40px;
+  color: #aaa;
+  margin-bottom: 48px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3px;
+  gap: 2px;
 }
 
 .card {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 64px 40px 52px;
-  background: #f1ebe0;
+  padding: 64px 48px;
 }
 
-/* ── Logo wrap ──────────────────────────────────────────── */
+.card.light { background: #faf9f7; }
+.card.dark  { background: #1a1c1a; }
+.card.cream { background: #f5f0e8; }
+.card.stone { background: #2c2c2a; }
+
 .logo-wrap {
   display: flex;
   flex-direction: column;
@@ -54,286 +67,237 @@ body {
 
 .wordmark {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   line-height: 1;
   white-space: nowrap;
 }
 
 .wordmark-text {
-  color: #161818;
+  font-weight: 700;
+  color: #1a1c1a;
   line-height: 1;
 }
 
-/*
-  3D E sizing:
-  viewBox "0 0 77 106" — the cap-letter portion is 100 units (y=6..106),
-  the 3D top-face protrudes 6 units above (y=0..6).
-  height: 0.76em makes the cap body ≈ 0.72em (100/106 × 0.76 ≈ 0.717em).
-*/
-.letter-e {
-  display: block;
-  height: 0.76em;
-  width: auto;
-  flex-shrink: 0;
-}
+.card.dark  .wordmark-text,
+.card.stone .wordmark-text { color: #f5f0e8; }
 
-/* ── LEATHER row ────────────────────────────────────────── */
 .leather-row {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 8px;
   width: 100%;
-  color: #8b4f2d;
 }
+
 .leather-row hr {
   flex: 1;
   border: none;
-  border-top: 1px solid currentColor;
-  opacity: 0.45;
+  border-top: 1px solid #8b4f2d;
+  opacity: 0.5;
 }
+
 .leather-text {
-  font-size: 8px;
-  letter-spacing: 5px;
+  font-size: 9px;
+  letter-spacing: 6px;
   text-transform: uppercase;
+  color: #8b4f2d;
   padding: 0 8px;
   white-space: nowrap;
-  font-family: sans-serif;
   font-weight: 400;
-  color: #8b4f2d;
 }
 
-/* ── Font variants ──────────────────────────────────────── */
-.f1 .wordmark { font-size: 48px; letter-spacing: 4px; }
-.f1 .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; }
+/* Font variants — font-size on .wordmark so em resolves correctly */
 
-.f2 .wordmark { font-size: 58px; letter-spacing: 3px; }
-.f2 .wordmark-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+.f-cinzel    .wordmark { font-size: 40px; }
+.f-cinzel    .wordmark-text { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 3px; }
+.f-cinzel    .leather-text  { font-family: 'Cinzel', serif; font-weight: 400; letter-spacing: 5px; }
 
-.f3 .wordmark { font-size: 50px; letter-spacing: 2px; }
-.f3 .wordmark-text { font-family: 'Playfair Display', serif; font-weight: 700; }
+.f-cormorant .wordmark { font-size: 48px; }
+.f-cormorant .wordmark-text { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: 2px; }
+.f-cormorant .leather-text  { font-family: 'Cormorant Garamond', serif; font-weight: 300; letter-spacing: 8px; }
 
-.f4 .wordmark { font-size: 46px; letter-spacing: 3px; }
-.f4 .wordmark-text { font-family: 'Libre Baskerville', serif; font-weight: 700; }
+.f-playfair  .wordmark { font-size: 38px; }
+.f-playfair  .wordmark-text { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 1px; }
+.f-playfair  .leather-text  { font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: 5px; }
 
-.f5 .wordmark { font-size: 54px; letter-spacing: 4px; }
-.f5 .wordmark-text { font-family: 'IM Fell English', serif; font-weight: 400; }
+.f-raleway   .wordmark { font-size: 36px; }
+.f-raleway   .wordmark-text { font-family: 'Raleway', sans-serif; font-weight: 200; letter-spacing: 10px; }
+.f-raleway   .leather-text  { font-family: 'Raleway', sans-serif; font-weight: 300; letter-spacing: 8px; }
 
-.f6 .wordmark { font-size: 52px; letter-spacing: 6px; }
-.f6 .wordmark-text { font-family: 'Spectral', serif; font-weight: 300; }
+.card-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-top: 20px;
+  text-align: center;
+}
 
-/* ── Labels ─────────────────────────────────────────────── */
+.card.dark  .card-label,
+.card.stone .card-label { color: #555; }
+
 .card-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.card-label {
-  margin-top: 20px;
-  font-size: 8px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #bbb;
-  text-align: center;
-}
-.card-label strong {
-  display: block;
-  color: #999;
-  letter-spacing: 3px;
-  font-size: 9px;
-  margin-bottom: 3px;
-}
 </style>
 </head>
 <body>
 
-<p class="page-title">PALLET Leather — Font Alternatifleri</p>
-<p class="page-sub">3D Palet E · Krem zemin · 6 yazı tipi</p>
+<h2>PALETKIDS — Logo Alternatifleri</h2>
 
-<!--
-  3D E SVG coordinates (all y values shifted +6 so top-face fits inside viewBox):
-  ViewBox: 0 0 77 106
-  Depth vector: right +9, up +6 units
+<!-- ═══════════════════════════════════════════════════════════
+     01 — Cinzel (antique roman, prestige)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">01 — Cinzel · Antique Roman</p>
+  <div class="grid">
 
-  Color scheme (light bg):
-    front  #8b4f2d — main face
-    top    #b97344 — top face highlight
-    shadow #522b12 — end cross-section
--->
-
-<div class="grid">
-
-  <!-- 1 Cinzel -->
-  <div class="card f1">
-    <div class="card-inner">
-      <div class="logo-wrap">
-        <div class="wordmark">
-          <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
-            <!-- spine -->
-            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
-            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
-            <!-- top arm -->
-            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
-            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
-            <!-- middle arm -->
-            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
-            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
-            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
-            <!-- bottom arm -->
-            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
-            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
-            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
-          </svg>
-          <span class="wordmark-text">T</span>
+    <div class="card light f-cinzel">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
         </div>
-        <div class="leather-row"><hr/><span class="leather-text">LEATHER</span><hr/></div>
+        <span class="card-label">Açık zemin</span>
       </div>
-      <span class="card-label"><strong>01 — Cinzel</strong>Antique Roman · Bold</span>
     </div>
-  </div>
 
-  <!-- 2 Cormorant Garamond -->
-  <div class="card f2">
-    <div class="card-inner">
-      <div class="logo-wrap">
-        <div class="wordmark">
-          <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
-            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
-            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
-            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
-            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
-            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
-            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
-            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
-            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
-            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
-          </svg>
-          <span class="wordmark-text">T</span>
+    <div class="card dark f-cinzel">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
         </div>
-        <div class="leather-row"><hr/><span class="leather-text">LEATHER</span><hr/></div>
+        <span class="card-label">Koyu zemin</span>
       </div>
-      <span class="card-label"><strong>02 — Cormorant Garamond</strong>Editorial Luxury · Light</span>
     </div>
-  </div>
 
-  <!-- 3 Playfair Display -->
-  <div class="card f3">
-    <div class="card-inner">
-      <div class="logo-wrap">
-        <div class="wordmark">
-          <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
-            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
-            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
-            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
-            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
-            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
-            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
-            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
-            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
-            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
-          </svg>
-          <span class="wordmark-text">T</span>
-        </div>
-        <div class="leather-row"><hr/><span class="leather-text">LEATHER</span><hr/></div>
-      </div>
-      <span class="card-label"><strong>03 — Playfair Display</strong>High Contrast · Bold</span>
-    </div>
   </div>
-
-  <!-- 4 Libre Baskerville -->
-  <div class="card f4">
-    <div class="card-inner">
-      <div class="logo-wrap">
-        <div class="wordmark">
-          <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
-            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
-            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
-            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
-            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
-            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
-            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
-            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
-            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
-            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
-          </svg>
-          <span class="wordmark-text">T</span>
-        </div>
-        <div class="leather-row"><hr/><span class="leather-text">LEATHER</span><hr/></div>
-      </div>
-      <span class="card-label"><strong>04 — Libre Baskerville</strong>Sturdy Serif · Bold</span>
-    </div>
-  </div>
-
-  <!-- 5 IM Fell English -->
-  <div class="card f5">
-    <div class="card-inner">
-      <div class="logo-wrap">
-        <div class="wordmark">
-          <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
-            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
-            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
-            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
-            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
-            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
-            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
-            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
-            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
-            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
-          </svg>
-          <span class="wordmark-text">T</span>
-        </div>
-        <div class="leather-row"><hr/><span class="leather-text">LEATHER</span><hr/></div>
-      </div>
-      <span class="card-label"><strong>05 — IM Fell English</strong>Oldstyle · Literary</span>
-    </div>
-  </div>
-
-  <!-- 6 Spectral -->
-  <div class="card f6">
-    <div class="card-inner">
-      <div class="logo-wrap">
-        <div class="wordmark">
-          <span class="wordmark-text">PALL</span>
-          <svg class="letter-e" viewBox="0 0 77 106" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="6" width="12" height="100" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 21,0 12,6" fill="#b97344"/>
-            <polygon points="12,6 21,0 21,100 12,106" fill="#522b12"/>
-            <polygon points="0,6 48,6 68,14 48,22 0,22" fill="#8b4f2d"/>
-            <polygon points="0,6 9,0 57,0 77,8 68,14 48,6" fill="#b97344"/>
-            <polygon points="68,14 77,8 57,16 48,22" fill="#522b12"/>
-            <polygon points="0,48 38,48 54,56 38,64 0,64" fill="#8b4f2d"/>
-            <polygon points="0,48 9,42 47,42 63,50 54,56 38,48" fill="#b97344"/>
-            <polygon points="54,56 63,50 47,58 38,64" fill="#522b12"/>
-            <polygon points="0,90 48,90 68,98 48,106 0,106" fill="#8b4f2d"/>
-            <polygon points="0,90 9,84 57,84 77,92 68,98 48,90" fill="#b97344"/>
-            <polygon points="68,98 77,92 57,100 48,106" fill="#522b12"/>
-          </svg>
-          <span class="wordmark-text">T</span>
-        </div>
-        <div class="leather-row"><hr/><span class="leather-text">LEATHER</span><hr/></div>
-      </div>
-      <span class="card-label"><strong>06 — Spectral</strong>Modern Serif · Light</span>
-    </div>
-  </div>
-
 </div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     02 — Cormorant Garamond (editorial luxury)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">02 — Cormorant Garamond · Editorial Luxury</p>
+  <div class="grid">
+
+    <div class="card cream f-cormorant">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Krem zemin</span>
+      </div>
+    </div>
+
+    <div class="card stone f-cormorant">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Taş zemin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     03 — Playfair Display (bold editorial)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">03 — Playfair Display · Bold Editorial</p>
+  <div class="grid">
+
+    <div class="card light f-playfair">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Açık zemin</span>
+      </div>
+    </div>
+
+    <div class="card dark f-playfair">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Koyu zemin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     04 — Raleway (geometric minimalist)
+════════════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="section-title">04 — Raleway · Geometric Minimal</p>
+  <div class="grid">
+
+    <div class="card cream f-raleway">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Krem zemin</span>
+      </div>
+    </div>
+
+    <div class="card stone f-raleway">
+      <div class="card-inner">
+        <div class="logo-wrap">
+          <div class="wordmark">
+            <span class="wordmark-text">PALETKIDS</span>
+          </div>
+          <div class="leather-row">
+            <hr/><span class="leather-text">LEATHER</span><hr/>
+          </div>
+        </div>
+        <span class="card-label">Taş zemin</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>

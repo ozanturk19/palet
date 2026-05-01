@@ -7,13 +7,14 @@ export default function Footer() {
         <div className="space-y-6">
           <Link
             href="/"
-            className="text-xl font-bold text-primary font-headline tracking-tighter block"
+            className="text-lg font-bold text-primary block"
+            style={{ fontFamily: "'Cinzel', serif", letterSpacing: "2px" }}
           >
-            PALLET
+            PALETKIDS
           </Link>
           <p className="text-sm text-[#5d4037] leading-relaxed max-w-xs font-body">
-            Premium erkek süet ayakkabı galerisi. Sınırlı koleksiyonlar,
-            kalıcı craftsmanship.
+            Çocuklar için premium deri ceket, yelek ve ayakkabı. Gerçek deri,
+            kalıcı kalite.
           </p>
         </div>
 
@@ -23,10 +24,10 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3">
             {[
-              { href: "/koleksiyon?kategori=chelsea-boot", label: "Suede Boots" },
-              { href: "/koleksiyon?kategori=loafer", label: "Loafers" },
-              { href: "/koleksiyon?kategori=derby", label: "Derbies" },
-              { href: "/bakim", label: "Care Kit" },
+              { href: "/koleksiyon?kategori=ceket", label: "Deri Ceket" },
+              { href: "/koleksiyon?kategori=yelek", label: "Deri Yelek" },
+              { href: "/koleksiyon?kategori=ayakkabi", label: "Ayakkabı" },
+              { href: "/bakim", label: "Deri Bakım" },
             ].map((link) => (
               <li key={link.href}>
                 <Link
@@ -96,7 +97,7 @@ export default function Footer() {
 
       <div className="px-6 md:px-12 py-8 border-t border-primary/10 flex flex-col md:flex-row justify-between items-center gap-4 max-w-[1920px] mx-auto">
         <p className="font-label text-xs uppercase tracking-widest text-[#5d4037] opacity-60">
-          © 2026 PALLET. The Suede Gallery. Tüm hakları saklıdır.
+          © 2026 PALETKIDS. Tüm hakları saklıdır.
         </p>
         <div className="flex gap-6">
           <span className="material-symbols-outlined text-primary opacity-60">
