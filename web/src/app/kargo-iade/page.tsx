@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kargo & İade — PALLET",
+  title: "Kargo & İade — PALET KIDS",
   description:
-    "PALLET kargo süreleri, ücretsiz iade koşulları ve değişim politikası. 14 gün koşulsuz iade.",
+    "PALET KIDS kargo süreleri, ücretsiz iade koşulları ve değişim politikası. 14 gün koşulsuz iade.",
 };
 
 const shippingInfo = [
@@ -44,7 +44,7 @@ const returnSteps = [
   {
     step: "01",
     title: "İade Talebi Oluşturun",
-    desc: "hello@pallet.com.tr adresine sipariş numaranızı ve iade nedeninizi yazın. 4 saat içinde yanıt alırsınız.",
+    desc: "info@paletkids.com adresine sipariş numaranızı ve iade nedeninizi yazın. 4 saat içinde yanıt alırsınız.",
   },
   {
     step: "02",
@@ -82,7 +82,7 @@ export default function KargoIadePage() {
         <section className="py-32 px-6 md:px-12 max-w-[1920px] mx-auto">
           <div className="max-w-3xl">
             <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-              Kargo & İade — PALLET
+              Kargo & İade — PALET KIDS
             </span>
             <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-10">
               Kolay <br />
@@ -232,7 +232,7 @@ export default function KargoIadePage() {
                 İade başlatmak için
               </p>
               <p className="text-on-surface-variant font-body text-sm">
-                hello@pallet.com.tr — Sipariş numaranızla yazın.
+                info@paletkids.com — Sipariş numaranızla yazın.
               </p>
             </div>
             <div className="flex gap-4 flex-wrap">

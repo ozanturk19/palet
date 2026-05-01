@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Çocuk deri ceket, yelek ve ayakkabılarınızı yıllarca giymek için bakım rehberi. Kolay adımlarla uzun ömür.",
   openGraph: {
     title: "Deri Bakım Rehberi — PALETKIDS",
-    description: "Gerçek deri yaşayan bir malzemedir. Doğru bakımla yıllarca sürer.",
+    description: "Premium deri yaşayan bir malzemedir. Doğru bakımla yıllarca sürer.",
   },
 };
 
@@ -85,12 +85,12 @@ const myths = [
   {
     myth: "Çocuk derisi çabuk bozulur.",
     fact:
-      "Gerçek tam tahıl deri sentetikten çok daha dayanıklıdır. Çocukların aktif kullanımına karşılık verir ve düzgün bakımla yıllarca sürer.",
+      "Çocuk dostu premium derimiz sentetikten çok daha dayanıklıdır. Çocukların aktif kullanımına karşılık verir ve düzgün bakımla yıllarca sürer.",
   },
   {
     myth: "Deri kıyafet çocuğa ağır gelir.",
     fact:
-      "Modern işlenmiş tam tahıl deri son derece hafiftir. PALETKIDS ürünleri özellikle hafiflik ve hareket özgürlüğü için tasarlanmıştır.",
+      "Özel işlenmiş premium derimiz son derece hafiftir. PALETKIDS ürünleri özellikle hafiflik ve hareket özgürlüğü için tasarlanmıştır.",
   },
   {
     myth: "Deri yıkandıkça bozulur.",
@@ -117,7 +117,7 @@ export default function BakimPage() {
                 <span className="text-primary italic">Bakım.</span>
               </h1>
               <p className="text-xl text-on-surface-variant leading-relaxed font-body max-w-xl">
-                Gerçek deri yaşayan bir malzemedir. Doğru bakımla çocuğunuzun
+                Premium deri yaşayan bir malzemedir. Doğru bakımla çocuğunuzun
                 derisini kardeşine devredebilirsiniz.
               </p>
             </div>

@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sürdürülebilirlik — PALLET",
+  title: "Sürdürülebilirlik — PALET KIDS",
   description:
-    "PALLET'in çevresel ve sosyal sorumluluk yaklaşımı. Vegetable-tanned deri, karbon dengeleme ve adil ücret politikası.",
+    "PALET KIDS'in çevresel ve sosyal sorumluluk yaklaşımı. Vegetable-tanned deri, karbon dengeleme ve adil ücret politikası.",
 };
 
 const pillars = [
@@ -48,7 +48,7 @@ const timeline = [
   { year: "2026", done: true, text: "Karbon dengeleme programı başladı" },
   { year: "2026", done: true, text: "%100 bitkisel tabaklanmış deri kullanımına geçildi" },
   { year: "2027", done: false, text: "Geri dönüştürülmüş ambalaj materialleri" },
-  { year: "2027", done: false, text: "Onarım programı: her PALLET çifti için 5 yıl ücretsiz taban bakımı" },
+  { year: "2027", done: false, text: "Onarım programı: her PALET KIDS ürünü için 5 yıl ücretsiz taban bakımı" },
   { year: "2028", done: false, text: "Tedarik zinciri Scope 3 Net Sıfır hedefi" },
   { year: "2030", done: false, text: "Döngüsel model: ömrünü tamamlayan çiftlerin yeniden işlenmesi" },
 ];
@@ -62,7 +62,7 @@ export default function SurdurulebilirlikPage() {
         <section className="py-32 px-6 md:px-12 max-w-[1920px] mx-auto">
           <div className="max-w-3xl">
             <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-              Sürdürülebilirlik — PALLET
+              Sürdürülebilirlik — PALET KIDS
             </span>
             <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-10">
               Uzun Ömürlü <br />
@@ -190,7 +190,7 @@ export default function SurdurulebilirlikPage() {
                 Her çift bir taahhüt.
               </p>
               <p className="text-on-primary/70 font-body">
-                Sorularınız için hello@pallet.com.tr
+                Sorularınız için info@paletkids.com
               </p>
             </div>
             <div className="flex gap-4 flex-wrap">

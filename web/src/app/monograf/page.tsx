@@ -7,10 +7,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Hikayemiz — PALETKIDS",
   description:
-    "PALETKIDS'in kuruluş hikayesi — çocuklar için gerçek deri, kalıcı kalite ve neden sentetik değil.",
+    "PALETKIDS'in kuruluş hikayesi — çocuklar için çocuk dostu premium deri, kalıcı kalite ve neden sentetik değil.",
   openGraph: {
     title: "Hikayemiz — PALETKIDS",
-    description: "Çocuklar için gerçek deri obsesyonu üzerine bir manifesto.",
+    description: "Çocuklar için çocuk dostu premium deri üzerine bir manifesto.",
   },
 };
 
@@ -19,8 +19,8 @@ const chapters = [
     number: "01",
     title: "Başlangıç Noktası",
     body: [
-      "PALETKIDS tek bir sorudan doğdu: Neden çocuk giyim piyasası gerçek deriyi çocuklardan uzak tutuyor? Plastik kaplı sahte deri her yerde, gerçek kalite ise yok.",
-      "Cevap basitti — kimse çocuklar için gerçek deri üzerine odaklanmamıştı. Biz o boşluğu doldurmak için yola çıktık.",
+      "PALETKIDS tek bir sorudan doğdu: Neden çocuk giyim piyasası kaliteli malzemeyi çocuklardan uzak tutuyor? Plastik kaplı sahte deri her yerde, kaliteli işçilik ise yok.",
+      "Cevap basitti — kimse çocuklar için kaliteli, dayanıklı deri üzerine odaklanmamıştı. Biz o boşluğu doldurmak için yola çıktık.",
     ],
     image: "/images/atelier.jpg",
     imageAlt: "PALETKIDS atölyesi — başlangıç",
@@ -28,9 +28,9 @@ const chapters = [
   },
   {
     number: "02",
-    title: "İtalyan Deri Seçimi",
+    title: "Premium Deri Seçimi",
     body: [
-      "İtalya'nın Toskana bölgesi, yüzyıllar boyunca dünyanın en iyi deri işçiliğine ev sahipliği yaptı. Her parça, tam tahıl deride kalite kontrolden geçiyor.",
+      "Her parça, özenli atölyelerde üretilir ve titiz kalite kontrolden geçer. Çocuk dostu premium deri — dayanıklı, şık, özgün.",
       "Çocuklar için özel yumuşatma işlemi uyguluyoruz — cilt hassasiyetine dikkat, hareket özgürlüğü ön planda. Sertlik değil, doğal esneklik.",
     ],
     image: "/images/hero-kids.jpg",
@@ -42,7 +42,7 @@ const chapters = [
     title: "Uzun Ömür Felsefesi",
     body: [
       "Hızlı moda değil, yavaş üretim. Her PALETKIDS parçası, birden fazla sezon — hatta kardeşten kardeşe geçecek şekilde tasarlanıyor.",
-      "Doğru bakımla gerçek deri yıllar içinde daha güzel bir görünüm kazanır. Bu yatırım, en iyi yatırımdır.",
+      "Doğru bakımla premium deri yıllar içinde daha güzel bir görünüm kazanır. Bu yatırım, en iyi yatırımdır.",
     ],
     image: "/images/featured-jacket.jpg",
     imageAlt: "El işçiliği detayı",
@@ -85,7 +85,7 @@ export default function MonografPage() {
               <span className="text-primary italic">Gerçek Çocuklar.</span>
             </h1>
             <p className="text-xl text-on-surface-variant leading-relaxed font-body max-w-xl">
-              Bu sayfa bir ürün kataloğu değil. Neden çocuklar için gerçek deri
+              Bu sayfa bir ürün kataloğu değil. Neden çocuklar için kaliteli premium deri
               kullanıyoruz — obsesyonun kaydı.
             </p>
           </div>

@@ -13,7 +13,7 @@ export default function Footer() {
             PALETKIDS
           </Link>
           <p className="text-sm text-[#5d4037] leading-relaxed max-w-xs font-body">
-            Çocuklar için premium deri ceket, yelek ve ayakkabı. Gerçek deri,
+            Çocuklar için premium deri ceket, yelek ve ayakkabı. Çocuk dostu premium deri,
             kalıcı kalite.
           </p>
         </div>
@@ -47,6 +47,7 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3">
             {[
+              { href: "/monograf", label: "Atölye Monografı" },
               { href: "/surdurulebilirlik", label: "Sürdürülebilirlik" },
               { href: "/kargo-iade", label: "Kargo & İade" },
               { href: "/gizlilik", label: "Gizlilik" },
@@ -82,15 +83,22 @@ export default function Footer() {
             </button>
           </div>
           <div className="flex gap-4 pt-2">
-            {["Instagram", "Pinterest"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className="text-xs font-label uppercase tracking-widest text-[#5d4037] hover:text-primary transition-colors"
-              >
-                {social}
-              </a>
-            ))}
+            <a
+              href="https://instagram.com/paletkids"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-label uppercase tracking-widest text-[#5d4037] hover:text-primary transition-colors"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://wa.me/905320000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-label uppercase tracking-widest text-[#5d4037] hover:text-primary transition-colors"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
       </div>

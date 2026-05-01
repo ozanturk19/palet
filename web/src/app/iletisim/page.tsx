@@ -1,20 +1,21 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import { submitContactForm } from "./actions";
 
 export const metadata: Metadata = {
-  title: "İletişim — PALLET",
+  title: "İletişim",
   description:
-    "PALLET ile iletişime geçin. Sipariş sorularınız, iade talepleriniz veya beden danışmanlığı için buradayız.",
+    "PALET KIDS ile iletişime geçin. Sipariş sorularınız, iade talepleriniz veya beden danışmanlığı için buradayız.",
 };
 
 const channels = [
   {
     icon: "mail",
     title: "E-posta",
-    value: "hello@pallet.com.tr",
+    value: "info@paletkids.com",
     note: "Yanıt süresi: 1 iş günü",
-    href: "mailto:hello@pallet.com.tr",
+    href: "mailto:info@paletkids.com",
   },
   {
     icon: "chat_bubble",
@@ -43,15 +44,15 @@ const faqs = [
   },
   {
     q: "Ayakkabım kusurlu geldi, ne yapmalıyım?",
-    a: "hello@pallet.com.tr adresine fotoğraflı geri bildirim gönderin. Kusurlu ürünleri iade sürecine sokmadan önce değerlendiriyoruz.",
+    a: "info@paletkids.com adresine fotoğraflı geri bildirim gönderin. Kusurlu ürünleri iade sürecine sokmadan önce değerlendiriyoruz.",
   },
   {
     q: "Toptan sipariş veya işbirliği için kimle konuşmalıyım?",
-    a: "B2B ve kurumsal talepler için b2b@pallet.com.tr adresine yazın.",
+    a: "B2B ve kurumsal talepler için info@paletkids.com adresine yazın.",
   },
 ];
 
-export default function IletisimPage() {
+export default function IletisimPage({ searchParams }: { searchParams: { basarili?: string; hata?: string } }) {
   return (
     <>
       <Navbar />
@@ -61,7 +62,7 @@ export default function IletisimPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-end">
             <div className="md:col-span-6">
               <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-                İletişim — PALLET
+                İletişim — PALET KIDS
               </span>
               <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-8">
                 Size <br />
@@ -124,7 +125,26 @@ export default function IletisimPage() {
                   Sipariş numaranızı biliyorsanız konuya ekleyin, işlemi
                   hızlandırır.
                 </p>
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                
+              {searchParams.basarili && (
+                <div className="mb-8 p-6 bg-green-50 border border-green-200 flex items-start gap-4">
+                  <span className="material-symbols-outlined text-green-600">check_circle</span>
+                  <div>
+                    <p className="font-headline font-bold text-green-800">Mesajınız iletildi!</p>
+                    <p className="text-sm text-green-700 font-body mt-1">En geç 1 iş günü içinde geri dönüş yapacağız.</p>
+                  </div>
+                </div>
+              )}
+              {searchParams.hata && (
+                <div className="mb-8 p-6 bg-red-50 border border-red-200 flex items-start gap-4">
+                  <span className="material-symbols-outlined text-red-600">error</span>
+                  <div>
+                    <p className="font-headline font-bold text-red-800">Bir sorun oluştu.</p>
+                    <p className="text-sm text-red-700 font-body mt-1">Lütfen tekrar deneyin veya doğrudan e-posta gönderin.</p>
+                  </div>
+                </div>
+              )}
+<form className="space-y-6" action={submitContactForm}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant block mb-2">
@@ -134,6 +154,7 @@ export default function IletisimPage() {
                         type="text"
                         className="w-full bg-transparent border-b border-outline/40 py-3 focus:outline-none focus:border-primary transition-all font-body text-sm"
                         placeholder="Adınız"
+                        name="ad"
                       />
                     </div>
                     <div>
@@ -144,6 +165,7 @@ export default function IletisimPage() {
                         type="text"
                         className="w-full bg-transparent border-b border-outline/40 py-3 focus:outline-none focus:border-primary transition-all font-body text-sm"
                         placeholder="Soyadınız"
+                        name="soyad"
                       />
                     </div>
                   </div>
@@ -153,6 +175,7 @@ export default function IletisimPage() {
                     </label>
                     <input
                       type="email"
+                      name="eposta"
                       className="w-full bg-transparent border-b border-outline/40 py-3 focus:outline-none focus:border-primary transition-all font-body text-sm"
                       placeholder="ornek@email.com"
                     />
@@ -161,7 +184,7 @@ export default function IletisimPage() {
                     <label className="font-label text-xs uppercase tracking-widest text-on-surface-variant block mb-2">
                       Konu
                     </label>
-                    <select className="w-full bg-transparent border-b border-outline/40 py-3 focus:outline-none focus:border-primary transition-all font-body text-sm text-on-surface appearance-none cursor-pointer">
+                    <select name="konu" className="w-full bg-transparent border-b border-outline/40 py-3 focus:outline-none focus:border-primary transition-all font-body text-sm text-on-surface appearance-none cursor-pointer">
                       <option value="">Konu seçin</option>
                       <option value="siparis">Sipariş / Kargo</option>
                       <option value="iade">İade / Değişim</option>
@@ -175,6 +198,7 @@ export default function IletisimPage() {
                     </label>
                     <textarea
                       rows={5}
+                      name="mesaj"
                       className="w-full bg-transparent border-b border-outline/40 py-3 focus:outline-none focus:border-primary transition-all font-body text-sm resize-none"
                       placeholder="Mesajınızı buraya yazın..."
                     />

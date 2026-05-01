@@ -1,72 +1,36 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Koleksiyon",
+  description: "Tüm PALET KIDS koleksiyonu — deri ceket, deri yelek ve ayakkabı. 3–14 yaş beden seçenekleriyle.",
+};
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
+import { products } from "@/lib/products";
 
-const products = [
-  {
-    slug: "heritage-ceket",
-    name: "Heritage Deri Ceket",
-    material: "Tam Tahıl İtalyan Deri",
-    price: "₺1.890",
-    badge: "Çok Satan",
-    colors: ["#3d2b1f", "#8b4f2d", "#c5a881"],
-    img: "/images/product-1.jpg",
-    offset: false,
-  },
-  {
-    slug: "moto-ceket",
-    name: "Moto Deri Ceket",
-    material: "Yumuşak Kuzu Derisi",
-    price: "₺2.190",
-    badge: null,
-    colors: ["#1a1a1a", "#3d2b1f"],
-    img: "/images/product-2.jpg",
-    offset: true,
-  },
-  {
-    slug: "classic-yelek",
-    name: "Classic Deri Yelek",
-    material: "Tam Tahıl İtalyan Deri",
-    price: "₺1.290",
-    badge: null,
-    colors: ["#8b4f2d", "#c5a881"],
-    img: "/images/product-3.jpg",
-    offset: false,
-  },
-  {
-    slug: "street-sneaker",
-    name: "Street Kid Sneaker",
-    material: "Gerçek Deri · EU 28–37",
-    price: "₺890",
-    badge: "Yeni",
-    colors: ["#dbdad7", "#8b4f2d", "#1a1a1a"],
-    img: "/images/product-4.jpg",
-    offset: true,
-  },
-  {
-    slug: "biker-yelek",
-    name: "Biker Deri Yelek",
-    material: "Siyah Yumuşak Deri",
-    price: "₺1.390",
-    badge: null,
-    colors: ["#1a1a1a"],
-    img: "/images/product-3.jpg",
-    offset: false,
-  },
-  {
-    slug: "palet-sneaker",
-    name: "Palet Sneaker",
-    material: "Krem Deri · EU 28–37",
-    price: "₺990",
-    badge: null,
-    colors: ["#dbdad7", "#c5a881"],
-    img: "/images/product-4.jpg",
-    offset: true,
-  },
+
+
+
+const categories = [
+  { label: "Tüm Ürünler", value: "",         href: "/koleksiyon",                  count: 6 },
+  { label: "Deri Ceket",   value: "ceket",    href: "/koleksiyon?kategori=ceket",   count: 2 },
+  { label: "Deri Yelek",   value: "yelek",    href: "/koleksiyon?kategori=yelek",   count: 2 },
+  { label: "Ayakkabı",     value: "ayakkabi", href: "/koleksiyon?kategori=ayakkabi",count: 2 },
 ];
 
-export default function KoleksiyonPage() {
+export default function KoleksiyonPage({
+  searchParams,
+}: {
+  searchParams: { kategori?: string };
+}) {
+  const aktifKategori = searchParams.kategori ?? "";
+  const filtered = aktifKategori
+    ? products.filter((p) => p.kategori === aktifKategori)
+    : products;
+
   return (
     <>
       <Navbar />
@@ -74,15 +38,16 @@ export default function KoleksiyonPage() {
         <header className="px-6 md:px-12 mb-16 max-w-[1920px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6">
             <div className="max-w-2xl">
-              <span className="font-label text-sm uppercase tracking-widest text-primary mb-4 block">
-                2026 Koleksiyonu
-              </span>
-              <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-on-background leading-none">
-                PALETKIDS
+              <span className="section-label mb-4 block">2026 Koleksiyonu</span>
+              <h1
+                className="font-headline font-bold tracking-tight text-on-background leading-none"
+                style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
+              >
+                PALET <span className="text-primary italic">KIDS</span>
               </h1>
             </div>
             <p className="font-body text-on-surface-variant max-w-xs italic text-right">
-              Gerçek deri, küçük bedenler için. Ceket, yelek ve ayakkabı koleksiyonu.
+              Çocuk dostu premium deri, küçük bedenler için.
             </p>
           </div>
         </header>
@@ -96,46 +61,25 @@ export default function KoleksiyonPage() {
                   Kategoriler
                 </h3>
                 <ul className="space-y-3 font-body text-sm">
-                  {[
-                    { label: "Tüm Ürünler", count: "6", active: true },
-                    { label: "Deri Ceket", count: "2", active: false },
-                    { label: "Deri Yelek", count: "2", active: false },
-                    { label: "Ayakkabı", count: "2", active: false },
-                  ].map((cat) => (
-                    <li
-                      key={cat.label}
-                      className={`flex justify-between items-center cursor-pointer transition-colors ${
-                        cat.active
-                          ? "text-primary font-bold"
-                          : "text-on-surface-variant hover:text-primary"
-                      }`}
-                    >
-                      <span>{cat.label}</span>
-                      <span className="text-[10px]">{cat.count}</span>
-                    </li>
-                  ))}
+                  {categories.map((cat) => {
+                    const isActive = cat.value === aktifKategori;
+                    return (
+                      <li key={cat.value}>
+                        <Link
+                          href={cat.href}
+                          className={`flex justify-between items-center transition-colors ${
+                            isActive
+                              ? "text-primary font-bold"
+                              : "text-on-surface-variant hover:text-primary"
+                          }`}
+                        >
+                          <span>{cat.label}</span>
+                          <span className="text-[10px]">{cat.count}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
-              </div>
-
-              <div>
-                <h3 className="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6 font-bold">
-                  Renk Paleti
-                </h3>
-                <div className="grid grid-cols-5 gap-3">
-                  {["#1a1a1a", "#3d2b1f", "#8b4f2d", "#c5a881", "#dbdad7"].map(
-                    (color, i) => (
-                      <button
-                        key={color}
-                        className={`w-8 h-8 rounded-full ring-2 ring-offset-2 transition-all ${
-                          i === 2
-                            ? "ring-primary"
-                            : "ring-transparent hover:ring-outline-variant"
-                        }`}
-                        style={{ backgroundColor: color }}
-                      />
-                    )
-                  )}
-                </div>
               </div>
 
               <div>
@@ -146,11 +90,7 @@ export default function KoleksiyonPage() {
                   {["3–4", "5–6", "7–8", "9–10", "11–12", "13–14"].map((size) => (
                     <button
                       key={size}
-                      className={`px-3 h-10 flex items-center justify-center text-xs font-medium transition-colors ${
-                        size === "7–8"
-                          ? "border border-primary text-primary"
-                          : "border border-transparent bg-surface-container-high hover:bg-surface-container-highest"
-                      }`}
+                      className="px-3 h-10 text-xs font-medium border border-transparent bg-surface-container-high hover:bg-surface-container-highest transition-colors"
                     >
                       {size}
                     </button>
@@ -166,7 +106,7 @@ export default function KoleksiyonPage() {
                   {[28, 30, 32, 34, 36, 37].map((size) => (
                     <button
                       key={size}
-                      className="w-10 h-10 flex items-center justify-center text-xs font-medium transition-colors border border-transparent bg-surface-container-high hover:bg-surface-container-highest"
+                      className="w-10 h-10 text-xs font-medium border border-transparent bg-surface-container-high hover:bg-surface-container-highest"
                     >
                       {size}
                     </button>
@@ -176,66 +116,58 @@ export default function KoleksiyonPage() {
             </div>
           </aside>
 
-          {/* Grid */}
+          {/* Ürün grid */}
           <section className="flex-grow">
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24">
-              {products.map((product) => (
-                <Link
-                  key={product.slug}
-                  href={`/urun/${product.slug}`}
-                  className={`group cursor-pointer ${product.offset ? "pt-12 md:pt-24" : ""}`}
-                >
-                  <div className="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
-                    <Image
-                      src={product.img}
-                      alt={product.name}
-                      fill
-                      className="object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-                    {product.badge && (
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-secondary-fixed text-on-secondary-fixed-variant font-label text-[10px] uppercase tracking-widest px-3 py-1">
-                          {product.badge}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h2 className="text-xl font-headline font-semibold text-on-background group-hover:text-primary transition-colors">
-                        {product.name}
-                      </h2>
-                      <p className="text-on-surface-variant text-sm mt-1">
-                        {product.material}
-                      </p>
-                    </div>
-                    <span className="text-lg font-headline font-light text-on-surface">
-                      {product.price}
-                    </span>
-                  </div>
-                  <div className="mt-4 flex gap-2">
-                    {product.colors.map((color) => (
-                      <div
-                        key={color}
-                        className="w-3 h-3 rounded-full"
-                        style={{ backgroundColor: color }}
+            {filtered.length === 0 ? (
+              <p className="font-body text-on-surface-variant py-24 text-center">
+                Bu kategoride ürün bulunamadı.
+              </p>
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24">
+                {filtered.map((product) => (
+                  <Link
+                    key={product.slug}
+                    href={`/urun/${product.slug}`}
+                    className={`group cursor-pointer ${product.offset ? "pt-12 md:pt-24" : ""}`}
+                  >
+                    <div className="relative aspect-[4/5] mb-8 overflow-hidden bg-surface-container-low">
+                      <Image
+                        src={product.img}
+                        alt={product.name}
+                        fill
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
-                    ))}
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-32 flex justify-center">
-              <button className="group flex flex-col items-center gap-4">
-                <span className="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">
-                  Keşfetmeye devam et
-                </span>
-                <div className="w-px h-16 bg-outline-variant overflow-hidden">
-                  <div className="w-full h-full bg-primary -translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
-                </div>
-              </button>
-            </div>
+                      {product.badge && (
+                        <div className="absolute top-4 left-4">
+                          <span className="bg-warm-cream text-primary font-label text-[10px] uppercase tracking-widest px-3 py-1">
+                            {product.badge}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h2 className="text-xl font-headline font-semibold text-on-background group-hover:text-primary transition-colors">
+                          {product.name}
+                        </h2>
+                        <p className="text-on-surface-variant text-sm mt-1">{product.material}</p>
+                      </div>
+                      <span className="text-lg font-headline font-light">{product.price}</span>
+                    </div>
+                    <div className="mt-4 flex gap-2">
+                      {product.colors.map((color) => (
+                        <div
+                          key={color}
+                          className="w-3 h-3 rounded-full border border-outline-variant/30"
+                          style={{ backgroundColor: color }}
+                        />
+                      ))}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
           </section>
         </div>
       </main>

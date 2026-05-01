@@ -3,16 +3,16 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gizlilik Politikası — PALLET",
+  title: "Gizlilik Politikası — PALET KIDS",
   description:
-    "PALLET'in kişisel veri işleme politikası. KVKK ve GDPR kapsamında verileriniz nasıl toplanır, işlenir ve korunur.",
+    "PALET KIDS'in kişisel veri işleme politikası. KVKK ve GDPR kapsamında verileriniz nasıl toplanır, işlenir ve korunur.",
 };
 
 const sections = [
   {
     title: "Veri Sorumlusu",
     content:
-      "PALLET markası adına kişisel verilerinizin işlenmesinden sorumlu tüzel kişi, bu site aracılığıyla hizmet sunan şirkettir. İletişim bilgilerine /iletisim sayfasından ulaşabilirsiniz.",
+      "PALET KIDS markası adına kişisel verilerinizin işlenmesinden sorumlu tüzel kişi, bu site aracılığıyla hizmet sunan şirkettir. İletişim bilgilerine /iletisim sayfasından ulaşabilirsiniz.",
   },
   {
     title: "Hangi Veriler Toplanır",
@@ -32,7 +32,7 @@ const sections = [
   {
     title: "Haklarınız (KVKK Md. 11)",
     content:
-      "Verilerinizin işlenip işlenmediğini öğrenme, işlenen verileri talep etme, hatalı verilerin düzeltilmesini isteme, silinmesini talep etme, işlemeye itiraz etme ve zararların tazminini talep etme haklarına sahipsiniz. Bu hakları kullanmak için gizlilik@pallet.com.tr adresine yazabilirsiniz.",
+      "Verilerinizin işlenip işlenmediğini öğrenme, işlenen verileri talep etme, hatalı verilerin düzeltilmesini isteme, silinmesini talep etme, işlemeye itiraz etme ve zararların tazminini talep etme haklarına sahipsiniz. Bu hakları kullanmak için info@paletkids.com adresine yazabilirsiniz.",
   },
   {
     title: "Çerezler (Cookies)",
@@ -109,11 +109,11 @@ export default function GizlilikPage() {
                   Sorularınız için
                 </h3>
                 <p className="text-on-surface-variant font-body text-sm">
-                  gizlilik@pallet.com.tr · Yanıt süresi: 3 iş günü
+                  info@paletkids.com · Yanıt süresi: 3 iş günü
                 </p>
               </div>
               <a
-                href="mailto:gizlilik@pallet.com.tr"
+                href="mailto:info@paletkids.com"
                 className="bg-primary text-on-primary px-8 py-3 font-label uppercase tracking-widest text-sm hover:opacity-90 transition-all flex-shrink-0"
               >
                 E-posta Gönder

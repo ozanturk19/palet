@@ -1,42 +1,64 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PALETKIDS | Çocuk Deri Giyim",
+  metadataBase: new URL("https://paletkids.com"),
+  title: {
+    default: "PALET KIDS | Çocuklar için Premium Deri Giyim",
+    template: "%s | PALET KIDS",
+  },
   description:
-    "Çocuklar için premium deri ceket, yelek ve ayakkabı. Gerçek deri, kalıcı kalite — PALETKIDS.",
+    "3–14 yaş çocuklar için el yapımı premium deri ceket, yelek ve ayakkabı. Çocuk dostu, dayanıklı, şık — PALET KIDS.",
+  keywords: ["çocuk deri ceket", "çocuk deri yelek", "çocuk deri ayakkabı", "premium çocuk giyim", "palet kids"],
   openGraph: {
-    title: "PALETKIDS | Çocuk Deri Giyim",
-    description: "Çocuklar için premium deri ceket, yelek ve ayakkabı koleksiyonu.",
+    title: "PALET KIDS | Çocuklar için Premium Deri Giyim",
+    description: "3–14 yaş çocuklar için el yapımı premium deri ceket, yelek ve ayakkabı.",
     type: "website",
+    locale: "tr_TR",
+    url: "https://paletkids.com",
+    siteName: "PALET KIDS",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PALET KIDS | Çocuklar için Premium Deri Giyim",
+    description: "3–14 yaş çocuklar için el yapımı premium deri ceket, yelek ve ayakkabı.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className="light">
+    <html lang="tr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Epilogue:wght@300;400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Nunito:wght@300;400;500;600;700;800&family=Cinzel:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
       </head>
-      <body className="bg-background text-on-background font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+      <body className="bg-background text-on-background font-body antialiased">
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-8YB82G9S5T"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8YB82G9S5T');
+        `}</Script>
       </body>
     </html>
   );
