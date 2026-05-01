@@ -7,11 +7,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/koleksiyon?kategori=chelsea-boot", label: "Suede Boots" },
-    { href: "/koleksiyon?kategori=loafer", label: "Loafers" },
-    { href: "/koleksiyon?kategori=derby", label: "Derbies" },
-    { href: "/bakim", label: "Care Kit" },
-    { href: "/monograf", label: "The Monograph" },
+    { href: "/koleksiyon?kategori=ceket", label: "Deri Ceket" },
+    { href: "/koleksiyon?kategori=yelek", label: "Deri Yelek" },
+    { href: "/koleksiyon?kategori=ayakkabi", label: "Ayakkabı" },
+    { href: "/bakim", label: "Bakım" },
+    { href: "/monograf", label: "Hikayemiz" },
   ];
 
   return (
@@ -20,9 +20,10 @@ export default function Navbar() {
         <div className="flex items-center gap-12">
           <Link
             href="/"
-            className="text-3xl font-bold tracking-tighter text-primary font-headline"
+            className="text-xl font-bold text-primary"
+            style={{ fontFamily: "'Cinzel', serif", letterSpacing: "3px" }}
           >
-            PALET
+            PALETKIDS
           </Link>
           <div className="hidden md:flex gap-8 items-center">
             {links.map((link) => (

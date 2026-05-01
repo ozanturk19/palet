@@ -5,43 +5,63 @@ import Link from "next/link";
 
 const products = [
   {
-    slug: "elysian-chelsea",
-    name: "Elysian Chelsea",
-    material: "Deep Tobacco Suede",
-    price: "₺3.290",
-    badge: "Limited",
-    colors: ["#3d2b1f", "#8b4f2d"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDTUZkQY_QN0bCqBuLHneF5L64BHN86pK7mnEo15XVyHQoRioNBIMQ7MYcGt5Jmj7vlz7KRGJ7GQWLduYCu4ppqn6udgxAfckLzxGTTISQ0u2cMLLZ7ax9HuOEK8p4KLloc93vW6cR_texyyhkbYzmVmiA8jVl5HrnkF19_myU6oCJibcxqE3OIrtNPGeLXf7lWBmR-K-nT5nsOAwCB-U6uyBDAQ5SCv5jfzUvfKUFO40aKbZJzCKkeADH3cSG0kw7AvGuWsKRTKf_h",
+    slug: "heritage-ceket",
+    name: "Heritage Deri Ceket",
+    material: "Tam Tahıl İtalyan Deri",
+    price: "₺1.890",
+    badge: "Çok Satan",
+    colors: ["#3d2b1f", "#8b4f2d", "#c5a881"],
+    img: "/images/product-1.jpg",
     offset: false,
   },
   {
-    slug: "arc-loafer",
-    name: "Arc Loafer",
-    material: "Sand Drift Suede",
-    price: "₺2.690",
+    slug: "moto-ceket",
+    name: "Moto Deri Ceket",
+    material: "Yumuşak Kuzu Derisi",
+    price: "₺2.190",
     badge: null,
-    colors: ["#dbdad7", "#c5a881", "#e69b73"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCweEqWRczKkmndYLKyj5rNG9NMQBnbDAOP0menQ1T3W3jWBQZeUBl77LfbiqfBixIQHxxiN5EnAja9MQAeIbRKfnfHjOGob8osBj288edC_tmcAnKvICRTxJmYHoZwHYs0gANBedEv-OZZDHFCCpA1xqqIBE9TUqZeQA1VCofk5TMl2Ad8-lj4liYIo5mCAiIgCBMAP4GsiZ1VKDnifBr_YnKgP7Usu1LJ7l3ohS26UfhkhDN575GxYppTyxiHF9xSyOBhBIZUOKD8",
+    colors: ["#1a1a1a", "#3d2b1f"],
+    img: "/images/product-2.jpg",
     offset: true,
   },
   {
-    slug: "mesa-derby",
-    name: "Mesa Derby",
-    material: "Burnt Ochre Suede",
-    price: "₺2.890",
+    slug: "classic-yelek",
+    name: "Classic Deri Yelek",
+    material: "Tam Tahıl İtalyan Deri",
+    price: "₺1.290",
     badge: null,
-    colors: ["#e69b73"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyN-tODtwQFfptMNBDDDOuzc9NkitPW09ibZpYOS-j8oLFvcRIpFP5RK42LppjbI3_v8Pj6ahOzrZ37OE7H6eyPZkTT4WIebfeXQPeoWaR4Sn1ioveekwkPNTzTBIjkncYxsPH3y85QE2SMGjaDqbnlO8zBCb-qwhTLhn5fL5WTE21zVM_3ZPTC1hoo_VF8_b1TlxV0GNeetkTFR4_gdwA_CZ15e7gEvKh1ZOf8_PNd7XsrhpEO76cok_FhK8cyOUtsUI5KiRCYrEU",
+    colors: ["#8b4f2d", "#c5a881"],
+    img: "/images/product-3.jpg",
     offset: false,
   },
   {
-    slug: "nocturne-boot",
-    name: "Nocturne Boot",
-    material: "Bitter Cocoa Suede",
-    price: "₺3.490",
+    slug: "street-sneaker",
+    name: "Street Kid Sneaker",
+    material: "Gerçek Deri · EU 28–37",
+    price: "₺890",
+    badge: "Yeni",
+    colors: ["#dbdad7", "#8b4f2d", "#1a1a1a"],
+    img: "/images/product-4.jpg",
+    offset: true,
+  },
+  {
+    slug: "biker-yelek",
+    name: "Biker Deri Yelek",
+    material: "Siyah Yumuşak Deri",
+    price: "₺1.390",
     badge: null,
-    colors: ["#3d2b1f"],
-    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjEDaGbqtf6mgxSvUP14KRTpOLxn9pnoZ_zevO3SE0R693J-ZcYtHbm718iO-JZr2bLLLLOK964yOZ9qFE3aiHJBjIoLiDTg-BKC6_Ni7boqw2Su2AhJaq14_Rc2tXtKpe8e65BNWp6QLdY5ehRxYuYktILR5KuBkdmsXK9gdG-r0U24F9Y5N-VcyHqfJ616W8mgtT_Ru7Zb5aGqhuq-NHTQkL2UsXI1-RKoNAANeUcZSP_HuFPeUqy-RXzyhKoYDcMsLSbxmI8fea",
+    colors: ["#1a1a1a"],
+    img: "/images/product-3.jpg",
+    offset: false,
+  },
+  {
+    slug: "palet-sneaker",
+    name: "Palet Sneaker",
+    material: "Krem Deri · EU 28–37",
+    price: "₺990",
+    badge: null,
+    colors: ["#dbdad7", "#c5a881"],
+    img: "/images/product-4.jpg",
     offset: true,
   },
 ];
@@ -55,14 +75,14 @@ export default function KoleksiyonPage() {
           <div className="flex flex-col md:flex-row justify-between items-end gap-6">
             <div className="max-w-2xl">
               <span className="font-label text-sm uppercase tracking-widest text-primary mb-4 block">
-                Heritage 2026
+                2026 Koleksiyonu
               </span>
               <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-on-background leading-none">
-                The Collection
+                PALETKIDS
               </h1>
             </div>
             <p className="font-body text-on-surface-variant max-w-xs italic text-right">
-              Premium süedin dokunsal keşfi. Modern erkeğin hayat galerisine hazırlanmış.
+              Gerçek deri, küçük bedenler için. Ceket, yelek ve ayakkabı koleksiyonu.
             </p>
           </div>
         </header>
@@ -77,10 +97,10 @@ export default function KoleksiyonPage() {
                 </h3>
                 <ul className="space-y-3 font-body text-sm">
                   {[
-                    { label: "Tüm Ürünler", count: "12", active: true },
-                    { label: "Chelsea Boots", count: "4", active: false },
-                    { label: "Penny Loafers", count: "4", active: false },
-                    { label: "Oxford Derbies", count: "4", active: false },
+                    { label: "Tüm Ürünler", count: "6", active: true },
+                    { label: "Deri Ceket", count: "2", active: false },
+                    { label: "Deri Yelek", count: "2", active: false },
+                    { label: "Ayakkabı", count: "2", active: false },
                   ].map((cat) => (
                     <li
                       key={cat.label}
@@ -102,12 +122,12 @@ export default function KoleksiyonPage() {
                   Renk Paleti
                 </h3>
                 <div className="grid grid-cols-5 gap-3">
-                  {["#3d2b1f", "#8b4f2d", "#c5a881", "#e69b73", "#dbdad7"].map(
+                  {["#1a1a1a", "#3d2b1f", "#8b4f2d", "#c5a881", "#dbdad7"].map(
                     (color, i) => (
                       <button
                         key={color}
                         className={`w-8 h-8 rounded-full ring-2 ring-offset-2 transition-all ${
-                          i === 1
+                          i === 2
                             ? "ring-primary"
                             : "ring-transparent hover:ring-outline-variant"
                         }`}
@@ -120,17 +140,33 @@ export default function KoleksiyonPage() {
 
               <div>
                 <h3 className="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6 font-bold">
-                  Numara (EU)
+                  Beden (Yaş)
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {[40, 41, 42, 43, 44, 45].map((size) => (
+                  {["3–4", "5–6", "7–8", "9–10", "11–12", "13–14"].map((size) => (
                     <button
                       key={size}
-                      className={`w-10 h-10 flex items-center justify-center text-xs font-medium transition-colors ${
-                        size === 42
+                      className={`px-3 h-10 flex items-center justify-center text-xs font-medium transition-colors ${
+                        size === "7–8"
                           ? "border border-primary text-primary"
                           : "border border-transparent bg-surface-container-high hover:bg-surface-container-highest"
                       }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-6 font-bold">
+                  Ayakkabı (EU)
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {[28, 30, 32, 34, 36, 37].map((size) => (
+                    <button
+                      key={size}
+                      className="w-10 h-10 flex items-center justify-center text-xs font-medium transition-colors border border-transparent bg-surface-container-high hover:bg-surface-container-highest"
                     >
                       {size}
                     </button>

@@ -4,98 +4,98 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Süet Bakım Rehberi — PALLET",
+  title: "Deri Bakım Rehberi — PALETKIDS",
   description:
-    "Süet ayakkabınızı yıllarca giymek için haftalık bakım rutini, koruma spreyinden dinlenme ritüeline eksiksiz rehber.",
+    "Çocuk deri ceket, yelek ve ayakkabılarınızı yıllarca giymek için bakım rehberi. Kolay adımlarla uzun ömür.",
   openGraph: {
-    title: "Süet Bakım Rehberi — PALLET",
-    description: "Süet yaşayan bir malzemedir. Doğru ritüelle zamanla daha da güzelleşir.",
+    title: "Deri Bakım Rehberi — PALETKIDS",
+    description: "Gerçek deri yaşayan bir malzemedir. Doğru bakımla yıllarca sürer.",
   },
 };
 
 const dailySteps = [
   {
     icon: "brush",
-    title: "Fırçalama",
+    title: "Yumuşak Bez ile Silme",
     when: "Her giyimden sonra",
     detail:
-      "Krep fırçayı tek yönde kullanın — süedin 'nap' yönüyle. Dairesel hareket lif demetlerini karıştırır, donuk görünüme yol açar. Hafif, kısa vuruşlar yeterli.",
-    tip: "Fırçayı ıslak ayakkabıya sürtmeyin; önce tamamen kurutun.",
+      "Nemli olmayan yumuşak bir bezle yüzeyi nazikçe silin. Toz ve hafif kirleri uzaklaştırır. Çocukların giyim alışkanlıkları için bu adım özellikle önemlidir.",
+    tip: "Islak bir bezle silmeyin — deriyi çok ıslatmak şekil bozukluğuna yol açabilir.",
   },
   {
     icon: "water_drop",
-    title: "Koruma Spreyi",
-    when: "Haftada bir",
+    title: "Deri Kremi",
+    when: "Ayda bir",
     detail:
-      "Nanotech bazlı su itici sprey, lifler arasına nüfuz ederek görünmez bir bariyer oluşturur. 25–30 cm mesafeden, eşit hareketlerle uygulayın. 10 dakika bekleyin, ardından tekrar fırçalayın.",
-    tip: "İlk kullanımda iki kat atın. Sonraki haftalarda bir kat yeterli.",
+      "Renksiz, çocuk güvenli deri kremi uygulayın. Derinin nem dengesini korur, çatlama ve kuruma önlenir. İnce bir tabaka yeterledir — fazlası ise leke bırakabilir.",
+    tip: "İlk uygulamadan önce görünmez bir bölgede test edin.",
   },
   {
     icon: "timer",
-    title: "Dinlenme",
-    when: "Ardışık gün giymeden önce",
+    title: "Hava Alma",
+    when: "Her giyimden sonra",
     detail:
-      "Deri, her giyimden sonra 24-48 saat dinlenmeli. Bu süre içinde deri içindeki nem dağılır, form kalıba geri döner. İki çift arasında dönüşümlü kullanım ömrü iki katına çıkarır.",
-    tip: "Dinlenme sırasında ahşap ayakkabı kalıbı kullanmak şekli korur.",
+      "Deriyi plastik poşette değil, açık havada ya da bez torbada saklayın. Deri nefes almalıdır — kapalı ortamda nem birikir, küf oluşabilir.",
+    tip: "Çocukların dolabında askıda asın, katlamayın.",
   },
   {
     icon: "storefront",
-    title: "Saklama",
+    title: "Mevsimlik Saklama",
     when: "Sezon dışı",
     detail:
-      "Plastik çanta yerine soluk alabilen toz torbaları kullanın. Direkt güneş ışığından ve ısı kaynaklarından uzak, serin ve kuru bir yerde saklayın. Orijinal kutu iyi bir seçenektir.",
-    tip: "Kutunun içine bir paket silika jel koyun. Nem sorunu bitecek.",
+      "Serin, kuru ve doğrudan güneş almayan bir yerde saklayın. Bez toz torbası kullanın. Ceket ve yelekleri doldurarak dolap içinde şekillerini koruyun.",
+    tip: "Silika jel paketi ile nemlenmeden koruyun.",
   },
 ];
 
 const deepCleanSteps = [
   {
     step: "01",
-    title: "Alanı Hazırla",
-    desc: "Bağcıkları çıkarın. Gazete veya kağıt havlu ile doldurun — ayakkabının şeklini korur ve temizlik sırasında bastırmanıza yardımcı olur.",
+    title: "Hazırlık",
+    desc: "Ceket veya yelekteki olası tozları yumuşak fırçayla alın. Ayakkabılar için bağcıkları çıkarıp içine kağıt tıkayın.",
   },
   {
     step: "02",
-    title: "Kuru Fırçalama",
-    desc: "Tüm yüzeyi krep fırçayla kuru olarak tarayın. Kabuk tutmuş kir ve toz liflerden ayrılır. Bu adımı atlarsanız ıslak temizlikte kir içeri gömülür.",
+    title: "Hafif Temizlik",
+    desc: "Az miktarda deri temizleyici veya sabun suyuyla (çok az!) ıslatılmış bezle nazikçe silin. Sadece kirli bölgelere uygulayın.",
   },
   {
     step: "03",
-    title: "Süet Silgisi",
-    desc: "İnatçı lekeler için beyaz süet silgisi kullanın. Hafif baskıyla sürtün, leke beyaz bir kiri soyar gibi yüzeye çıkar. Ardından fırçayla uzaklaştırın.",
+    title: "Leke Tedavisi",
+    desc: "İnatçı lekeler için deri silgisi veya az alkollü bez kullanın. Dairesel değil, tek yönde silin. Aşırı ovalamaktan kaçının.",
   },
   {
     step: "04",
-    title: "Nem ile Temizlik",
-    desc: "Mikrofibir bezi hafifçe ıslatın — ıslak değil, nem tutmuş. Leke noktalarını tek yönde silin. Asla suya daldırmayın, buz gibi şekle oturabilir.",
+    title: "Doğal Kurutma",
+    desc: "Asla saç kurutma makinesi veya radyatör kullanmayın. Oda sıcaklığında, gölgede kurutun. Şekli korumak için içini doldurun.",
   },
   {
     step: "05",
-    title: "Kurutma",
-    desc: "Doğal ortamda, oda sıcaklığında kuruyun. Saç kurutma makinesi, radyatör veya doğrudan güneş yasak — süet içinden kurumak zorundadır.",
+    title: "Nem Dengesi",
+    desc: "Tamamen kuruduktan sonra deri kremi uygulayın. Bu adım temizlik sonrası kaybolan doğal nemi geri kazandırır.",
   },
   {
     step: "06",
-    title: "Fırçalama ve Sprey",
-    desc: "Tamamen kuruduktan sonra son bir fırçalama. Ardından koruma spreyi. Ayakkabı bakım öncesinden daha canlı görünecek.",
+    title: "Son Kontrol",
+    desc: "Fermuarları, tokaları ve dikiş yerlerini kontrol edin. Küçük sorunlar büyümeden önce müdahale edilirse deri ömrü uzar.",
   },
 ];
 
 const myths = [
   {
-    myth: "Süet suya dayanıklı değildir.",
+    myth: "Çocuk derisi çabuk bozulur.",
     fact:
-      "Koruma spreyi ile treat edilmiş süet hafif yağmura kolaylıkla dayanır. Sorun materyal değil, bakımsızlık.",
+      "Gerçek tam tahıl deri sentetikten çok daha dayanıklıdır. Çocukların aktif kullanımına karşılık verir ve düzgün bakımla yıllarca sürer.",
   },
   {
-    myth: "Leke olunca bitmişti.",
+    myth: "Deri kıyafet çocuğa ağır gelir.",
     fact:
-      "Çoğu leke, hızlı müdahale ile tamamen giderilebilir. Leke oluşunca 24 saat içinde uygulanan kuru fırçalama çoğu sorunu çözer.",
+      "Modern işlenmiş tam tahıl deri son derece hafiftir. PALETKIDS ürünleri özellikle hafiflik ve hareket özgürlüğü için tasarlanmıştır.",
   },
   {
-    myth: "Süet sadece yazlık ayakkabı.",
+    myth: "Deri yıkandıkça bozulur.",
     fact:
-      "Kalın nap süet, yün astarla kombine edildiğinde kış aylarında da konforlu ve dayanıklıdır.",
+      "Doğru bakım ile deri yıkanmaz — silinir. Bu basit fark, derinin yıllarca güzel kalmasını sağlar.",
   },
 ];
 
@@ -110,15 +110,15 @@ export default function BakimPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
             <div className="md:col-span-7">
               <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-                Care Kit — PALLET
+                Bakım Rehberi — PALETKIDS
               </span>
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-10">
-                Süet İçin <br />
-                <span className="text-primary italic">Ritüel.</span>
+                Deri İçin <br />
+                <span className="text-primary italic">Bakım.</span>
               </h1>
               <p className="text-xl text-on-surface-variant leading-relaxed font-body max-w-xl">
-                Süet yaşayan bir malzemedir. Yıllarca giyilen çiftler "yıpranmış"
-                değil, "karakterli" görünür. Fark — rutindir.
+                Gerçek deri yaşayan bir malzemedir. Doğru bakımla çocuğunuzun
+                derisini kardeşine devredebilirsiniz.
               </p>
             </div>
             <div className="md:col-span-4 md:col-start-9 bg-surface-container-low p-10">
@@ -151,7 +151,7 @@ export default function BakimPage() {
                 Günlük Bakım
               </h2>
               <p className="text-on-surface-variant font-body max-w-xl">
-                Toplam süre: 5 dakika. Hayat farkı yaratan rutinler bunlar.
+                Toplam süre: 2 dakika. Uzun ömrün sırrı burada.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
@@ -200,8 +200,7 @@ export default function BakimPage() {
                 Derin Temizlik
               </h2>
               <p className="text-on-surface-variant font-body max-w-xl">
-                Ayda bir uygulayın. Zorunlu değil — ama derin temizlikten sonra
-                ayakkabınız yeni gibi hisseder.
+                Ayda bir uygulayın. Sonuç — deri yeniden canlılanır.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
@@ -230,7 +229,7 @@ export default function BakimPage() {
                 Mitler & Gerçekler
               </h2>
               <p className="text-on-surface-variant font-body max-w-xl">
-                Süet hakkında yaygın yanlış bilgiler.
+                Çocuk deri ürünleri hakkında yaygın yanlış bilgiler.
               </p>
             </div>
             <div className="space-y-1">
@@ -264,10 +263,10 @@ export default function BakimPage() {
           <div className="px-6 md:px-12 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
             <div>
               <h2 className="font-headline text-5xl font-extrabold text-on-primary tracking-tighter mb-4 italic">
-                Bakım kitini edinin.
+                Deri bakım kiti hediye.
               </h2>
               <p className="text-on-primary/70 font-body text-lg">
-                Her PALLET siparişinde bakım spreyi ve krep fırça hediye.
+                Her PALETKIDS siparişinde deri bakım bezi ve koruyucu krem hediye.
               </p>
             </div>
             <div className="flex gap-6 flex-wrap md:justify-end">
