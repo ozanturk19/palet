@@ -10,14 +10,17 @@ export async function submitContactForm(formData: FormData) {
   const eposta = String(formData.get("eposta") ?? "").trim();
   const konu = String(formData.get("konu") ?? "").trim();
   const mesaj = String(formData.get("mesaj") ?? "").trim();
+  const locale = String(formData.get("locale") ?? "tr").trim();
 
   if (!ad || !eposta || !mesaj) {
-    redirect("/iletisim?hata=eksik-alan");
+    const prefix = locale === "en" ? "/en" : "";
+    redirect(`${prefix}/iletisim?hata=eksik-alan`);
   }
 
   const entry = {
     id: Date.now(),
     tarih: new Date().toISOString(),
+    locale,
     ad,
     soyad,
     eposta,
@@ -25,7 +28,7 @@ export async function submitContactForm(formData: FormData) {
     mesaj,
   };
 
-  const dataDir = path.join(process.cwd(), "data");
+  const dataDir = "/data";
   const dataFile = path.join(dataDir, "mesajlar.json");
 
   try {
@@ -40,8 +43,10 @@ export async function submitContactForm(formData: FormData) {
     existing.push(entry);
     await fs.writeFile(dataFile, JSON.stringify(existing, null, 2), "utf-8");
   } catch {
-    redirect("/iletisim?hata=sunucu");
+    const prefix = locale === "en" ? "/en" : "";
+    redirect(`${prefix}/iletisim?hata=sunucu`);
   }
 
-  redirect("/iletisim?basarili=1");
+  const localePrefix = locale === "en" ? "/en" : "";
+  redirect(`${localePrefix}/iletisim?basarili=1`);
 }
