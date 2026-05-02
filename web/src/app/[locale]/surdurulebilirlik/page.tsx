@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Sustainability — PALET KIDS" : "Sürdürülebilirlik — PALET KIDS",
+    title: en ? "Sustainability" : "Sürdürülebilirlik",
     description: en
       ? "PALET KIDS environmental and social responsibility. Vegetable-tanned leather, carbon-neutral shipping and fair wages."
       : "PALET KIDS'in çevresel ve sosyal sorumluluk yaklaşımı. Vegetable-tanned deri, karbon dengeleme ve adil ücret politikası.",
@@ -115,7 +115,7 @@ export default async function SurdurulebilirlikPage() {
         <section className="py-32 px-6 md:px-12 max-w-[1920px] mx-auto">
           <div className="max-w-3xl">
             <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-              {en ? "Sustainability — PALET KIDS" : "Sürdürülebilirlik — PALET KIDS"}
+              {en ? "Sustainability" : "Sürdürülebilirlik"}
             </span>
             <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-10">
               {en ? (

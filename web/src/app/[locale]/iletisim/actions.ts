@@ -28,7 +28,7 @@ export async function submitContactForm(formData: FormData) {
     mesaj,
   };
 
-  const dataDir = "/data";
+  const dataDir = "/opt/palet-app/data";
   const dataFile = path.join(dataDir, "mesajlar.json");
 
   try {

@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Shipping & Returns — PALET KIDS" : "Kargo & İade — PALET KIDS",
+    title: en ? "Shipping & Returns" : "Kargo & İade",
     description: en
       ? "PALET KIDS shipping times, free return conditions and exchange policy. 14-day unconditional returns."
       : "PALET KIDS kargo süreleri, ücretsiz iade koşulları ve değişim politikası. 14 gün koşulsuz iade.",
@@ -155,7 +155,7 @@ export default async function KargoIadePage() {
         <section className="py-32 px-6 md:px-12 max-w-[1920px] mx-auto">
           <div className="max-w-3xl">
             <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-              {en ? "Shipping & Returns — PALET KIDS" : "Kargo & İade — PALET KIDS"}
+              {en ? "Shipping & Returns" : "Kargo & İade"}
             </span>
             <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-10">
               {en ? (

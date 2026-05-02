@@ -9,7 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const isEn = locale === "en";
   return {
-    title: isEn ? "Home" : "Anasayfa",
+    title: { absolute: isEn ? "PALET KIDS | Premium Kids Leather" : "PALET KIDS | Premium Çocuk Deri" },
     description: isEn
       ? "Timeless pieces for little ones. Handcrafted premium leather jackets, vests and shoes for children aged 3–14."
       : "3–14 yaş çocuklar için el yapımı premium deri ceket, yelek ve ayakkabı. PALET KIDS ile çocuğunuzu hem rahat hem şık giydirin.",

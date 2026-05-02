@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Contact — PALET KIDS" : "İletişim — PALET KIDS",
+    title: en ? "Contact" : "İletişim",
     description: en
       ? "Get in touch with PALET KIDS. For order questions, returns or size advice — we're here."
       : "PALET KIDS ile iletişime geçin. Sipariş sorularınız, iade talepleriniz veya beden danışmanlığı için buradayız.",
@@ -118,7 +118,7 @@ export default async function IletisimPage({
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-end">
             <div className="md:col-span-6">
               <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-                {en ? "Contact — PALET KIDS" : "İletişim — PALET KIDS"}
+                {en ? "Contact" : "İletişim"}
               </span>
               <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-8">
                 {en ? (

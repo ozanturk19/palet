@@ -8,12 +8,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Leather Care Guide — PALET KIDS" : "Deri Bakım Rehberi — PALETKIDS",
+    title: en ? "Leather Care Guide" : "Deri Bakım Rehberi",
     description: en
       ? "How to care for your children's leather jacket, vest and shoes for years of wear. Easy steps for long life."
       : "Çocuk deri ceket, yelek ve ayakkabılarınızı yıllarca giymek için bakım rehberi. Kolay adımlarla uzun ömür.",
     openGraph: {
-      title: en ? "Leather Care Guide — PALET KIDS" : "Deri Bakım Rehberi — PALETKIDS",
+      title: en ? "Leather Care Guide" : "Deri Bakım Rehberi",
       description: en
         ? "Premium leather is a living material. With proper care it lasts years."
         : "Premium deri yaşayan bir malzemedir. Doğru bakımla yıllarca sürer.",

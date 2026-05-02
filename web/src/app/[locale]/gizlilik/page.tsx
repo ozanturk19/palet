@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Privacy Policy — PALET KIDS" : "Gizlilik Politikası — PALET KIDS",
+    title: en ? "Privacy Policy" : "Gizlilik Politikası",
     description: en
       ? "PALET KIDS personal data processing policy. How your data is collected, processed and protected under GDPR."
       : "PALET KIDS'in kişisel veri işleme politikası. KVKK ve GDPR kapsamında verileriniz nasıl toplanır, işlenir ve korunur.",

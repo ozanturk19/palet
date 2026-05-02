@@ -7,6 +7,16 @@ import { products } from "@/lib/products";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+function translateProductName(name: string): string {
+  return name
+    .replace("Heritage Deri Ceket", "Heritage Leather Jacket")
+    .replace("Moto Deri Ceket", "Moto Leather Jacket")
+    .replace("Classic Deri Yelek", "Classic Leather Vest")
+    .replace("Biker Deri Yelek", "Biker Leather Vest")
+    .replace("Street Kid Sneaker", "Street Kid Sneaker")
+    .replace("Palet Sneaker", "Palet Sneaker");
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -14,16 +24,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const product = products.find((p) => p.slug === params.slug);
   if (!product) return { title: "Product Not Found" };
+  const locale = await getLocale();
+  const enMeta = locale === "en";
+  const productTitle = enMeta ? translateProductName(product.name) : product.name;
   return {
-    title: product.name + " — PALET KIDS",
+    title: productTitle,
     description:
-      product.name +
-      " — Premium child-safe leather. " +
+      productTitle +
+      (enMeta ? " — Premium child-safe leather. " : " — Çocuk dostu premium deri. ") +
       product.price +
-      ". From the PALET KIDS collection.",
+      (enMeta ? ". From the PALET KIDS collection." : ". PALET KIDS koleksiyonundan."),
     openGraph: {
-      title: product.name,
-      description: product.name + " — " + product.material,
+      title: productTitle,
+      description: productTitle + " — " + product.material,
       images: [{ url: product.img }],
     },
   };

@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Collection — PALET KIDS" : "Koleksiyon — PALET KIDS",
+    title: en ? "Collection" : "Koleksiyon",
     description: en
       ? "The full PALET KIDS collection — leather jackets, leather vests and shoes. Sizes for ages 3–14."
       : "Tüm PALET KIDS koleksiyonu — deri ceket, deri yelek ve ayakkabı. 3–14 yaş beden seçenekleriyle.",

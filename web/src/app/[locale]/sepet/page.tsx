@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Your Bag — PALET KIDS" : "Sepet — PALET KIDS",
+    title: en ? "Your Bag" : "Sepet",
     description: en ? "Your shopping bag." : "Alışveriş sepetiniz.",
   };
 }

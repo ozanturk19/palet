@@ -9,12 +9,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const en = locale === "en";
   return {
-    title: en ? "Our Story — PALET KIDS" : "Hikayemiz — PALETKIDS",
+    title: en ? "Our Story" : "Hikayemiz",
     description: en
       ? "From pallet to product — the PALET KIDS brand story. Premium leather for children aged 3–14."
       : "PALETKIDS'in kuruluş hikayesi — çocuklar için premium deri ve kalıcı kalite.",
     openGraph: {
-      title: en ? "Our Story — PALET KIDS" : "Hikayemiz — PALETKIDS",
+      title: en ? "Our Story" : "Hikayemiz",
       description: en
         ? "Premium leather for children. Timeless pieces for little ones."
         : "Çocuklar için çocuk dostu premium deri üzerine bir manifesto.",
@@ -142,7 +142,7 @@ export default async function MonografPage() {
         <section className="py-32 px-6 md:px-12 max-w-[1920px] mx-auto">
           <div className="max-w-3xl">
             <span className="font-label text-xs uppercase tracking-widest text-primary mb-6 block">
-              {en ? "Our Story — PALET KIDS" : "Hikayemiz — PALETKIDS"}
+              {en ? "Our Story" : "Hikayemiz"}
             </span>
             <h1 className="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-background mb-10">
               {en ? (
@@ -187,7 +187,7 @@ export default async function MonografPage() {
                   }`}
                 >
                   <div className="aspect-[4/3] bg-surface-container overflow-hidden relative">
-                    <Image src={chapter.image} alt={chapter.imageAlt} fill className="object-cover" />
+                    <Image src={chapter.image} alt={chapter.imageAlt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority={i === 0} />
                   </div>
                 </div>
                 <div
